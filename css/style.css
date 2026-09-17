@@ -1,0 +1,700 @@
+/* =========================================================
+   DENKESYAH MADIUN
+   Main Website Stylesheet
+   ========================================================= */
+
+:root {
+  --g: #173b2b;
+  --d: #092219;
+  --gold: #c6a24b;
+  --cream: #f5f3eb;
+  --ink: #17221d;
+  --muted: #66736c;
+  --line: #e0e6e1;
+  --white: #ffffff;
+}
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  line-height: 1.6;
+  background: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.wrap {
+  width: min(1120px, 92%);
+  margin: auto;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.nav {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background: rgba(9, 34, 25, 0.97);
+  border-bottom: 1px solid #806a32;
+}
+
+.navin {
+  min-height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+/* Brand */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  color: #fff;
+  font-weight: 800;
+}
+
+.brand small {
+  display: block;
+
+  font-size: 9px;
+  letter-spacing: 1px;
+
+  color: #cbd5cf;
+}
+
+/* Logo */
+
+.logo-img {
+  width: 48px;
+  height: 54px;
+
+  border: 0 !important;
+  border-radius: 0 !important;
+
+  background: transparent;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  overflow: visible;
+}
+
+.logo-img img {
+  width: 48px;
+  height: 54px;
+
+  object-fit: contain;
+  display: block;
+}
+
+/* Navigation links */
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  color: #eef2ef;
+
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.links a {
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: #e0c46b;
+}
+
+.links a.active {
+  color: #e0c46b;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  min-height: 720px;
+
+  padding: 155px 0 90px;
+
+  color: #fff;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(198, 162, 75, 0.2),
+      transparent 28%
+    ),
+    linear-gradient(
+      100deg,
+      rgba(6, 28, 19, 0.98),
+      rgba(23, 59, 43, 0.82)
+    );
+
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 510px;
+  height: 510px;
+
+  border: 1px solid rgba(198, 162, 75, 0.2);
+  border-radius: 50%;
+
+  right: -190px;
+  bottom: -225px;
+}
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.pagehead {
+  padding: 145px 0 70px;
+
+  background:
+    linear-gradient(
+      100deg,
+      rgba(6, 28, 19, 0.98),
+      rgba(23, 59, 43, 0.9)
+    );
+
+  color: #fff;
+}
+
+.pagehead h1 {
+  font-size: clamp(38px, 6vw, 64px);
+  line-height: 1.05;
+
+  margin: 12px 0;
+}
+
+.pagehead p {
+  max-width: 700px;
+  color: #d6e0da;
+}
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.tag {
+  display: inline-block;
+
+  border: 1px solid rgba(198, 162, 75, 0.7);
+
+  color: #e3c96f;
+
+  border-radius: 30px;
+
+  padding: 7px 13px;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+.eyebrow {
+  color: #98762b;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+h2 {
+  color: var(--d);
+
+  font-size: clamp(30px, 4vw, 43px);
+
+  line-height: 1.1;
+
+  margin: 9px 0 15px;
+}
+
+.lead {
+  color: var(--muted);
+  max-width: 720px;
+}
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.buttons {
+  display: flex;
+  gap: 12px;
+
+  margin-top: 30px;
+
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 19px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.btn.gold {
+  background: var(--gold);
+  color: #13241b;
+}
+
+.btn.outline {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+}
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+section {
+  padding: 86px 0;
+}
+
+.cream {
+  background: var(--cream);
+}
+
+.content {
+  min-height: 55vh;
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.grid {
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 55px;
+
+  align-items: center;
+}
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.profile {
+  border-radius: 19px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #173b2b,
+      #285640
+    );
+
+  padding: 33px;
+
+  color: #fff;
+
+  min-height: 280px;
+
+  box-shadow:
+    0 15px 40px rgba(12, 40, 26, 0.13);
+}
+
+.profile strong {
+  font-size: 21px;
+}
+
+.profile p {
+  color: #d7e2db;
+}
+
+.profile-logo {
+  width: 86px;
+  height: 86px;
+
+  object-fit: contain;
+
+  display: block;
+
+  margin-bottom: 15px;
+}
+
+/* =========================================================
+   NOTE
+   ========================================================= */
+
+.note {
+  margin-top: 22px;
+
+  padding: 13px 16px;
+
+  border-left: 3px solid var(--gold);
+
+  background: #faf9f3;
+
+  color: #657069;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin-top: 30px;
+}
+
+.card {
+  background: #fff;
+
+  border: 1px solid var(--line);
+
+  border-radius: 15px;
+
+  padding: 26px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 30px rgba(10, 40, 25, 0.08);
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 11px;
+
+  background: #edf1ec;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--g);
+
+  font-size: 21px;
+  font-weight: 900;
+
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  color: var(--g);
+
+  margin: 0 0 7px;
+}
+
+.card p {
+  font-size: 13px;
+
+  color: var(--muted);
+
+  margin: 0;
+}
+
+/* =========================================================
+   DATE
+   ========================================================= */
+
+.date {
+  font-size: 10px;
+
+  color: #9a792d;
+
+  font-weight: 900;
+
+  letter-spacing: 1.3px;
+}
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+
+.gallery {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1fr;
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+.photo {
+  min-height: 175px;
+
+  border-radius: 14px;
+
+  padding: 18px;
+
+  display: flex;
+  align-items: end;
+
+  color: #fff;
+
+  font-weight: 800;
+
+  background:
+    linear-gradient(
+      135deg,
+      #234a37,
+      #99834d
+    );
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.photo.big {
+  min-height: 365px;
+}
+
+.photo::after {
+  content: "DOKUMENTASI";
+
+  position: absolute;
+
+  right: -12px;
+  bottom: -20px;
+
+  font-size: 39px;
+
+  opacity: 0.12;
+
+  font-weight: 900;
+}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact {
+  background: var(--d);
+
+  color: #fff;
+}
+
+.contact h2 {
+  color: #fff;
+}
+
+.contactgrid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 45px;
+}
+
+.item {
+  padding: 16px 0;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.12);
+}
+
+.item span {
+  display: block;
+
+  color: #aabbb2;
+
+  text-transform: uppercase;
+
+  font-size: 10px;
+
+  letter-spacing: 1.4px;
+}
+
+.item b {
+  font-size: 15px;
+}
+
+/* =========================================================
+   BACK LINK
+   ========================================================= */
+
+.back {
+  display: inline-block;
+
+  margin-top: 25px;
+
+  color: var(--gold);
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  background: #06130d;
+
+  color: #aab8b1;
+
+  padding: 24px 0;
+
+  font-size: 11px;
+}
+
+.foot {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .links {
+    display: none;
+  }
+
+  .grid,
+  .contactgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .photo.big {
+    grid-column: 1 / -1;
+  }
+
+  .hero {
+    min-height: 650px;
+
+    padding-top: 125px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  section {
+    padding: 65px 0;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .photo.big {
+    grid-column: auto;
+  }
+
+  .foot {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+  }
+
+  .logo-img,
+  .logo-img img {
+    width: 42px;
+    height: 48px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand small {
+    font-size: 8px;
+  }
+}
