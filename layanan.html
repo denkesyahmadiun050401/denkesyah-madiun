@@ -1,18 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-
 <head>
-  <meta charset="utf-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
-
-  <meta
-    name="description"
-    content="Layanan dan dukungan kesehatan DENKESYAH MADIUN"
-  >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Layanan | DENKESYAH MADIUN</title>
 
@@ -21,37 +11,30 @@
 
 <body>
 
-  <!-- =====================================================
-       NAVIGASI
-       ===================================================== -->
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+  <header class="nav">
 
-  <nav class="nav">
+    <div class="navin wrap">
 
-    <div class="wrap navin">
+      <a href="index.html" class="brand">
 
-      <a class="brand" href="index.html">
-
-        <div class="mark logo-img">
-
-          <img
-            src="images/logo.png"
-            alt="Logo DENKESYAH MADIUN"
-          >
-
-        </div>
+        <img
+          src="images/logo.png"
+          alt="Logo DENKESYAH MADIUN"
+          class="logo-img"
+        >
 
         <div>
-          DENKESYAH MADIUN
-
-          <small>
-            DETASEMEN KESEHATAN TNI ANGKATAN DARAT
-          </small>
+          <strong>DENKESYAH MADIUN</strong>
+          <small>Informasi Resmi</small>
         </div>
 
       </a>
 
 
-      <div class="links">
+      <nav class="links">
 
         <a href="index.html">
           Beranda
@@ -61,10 +44,7 @@
           Profil
         </a>
 
-        <a
-          href="layanan.html"
-          class="active"
-        >
+        <a href="layanan.html" class="active">
           Layanan
         </a>
 
@@ -80,362 +60,468 @@
           Kontak
         </a>
 
-      </div>
-
-    </div>
-
-  </nav>
-
-
-  <!-- =====================================================
-       HEADER
-       ===================================================== -->
-
-  <header class="pagehead">
-
-    <div class="wrap">
-
-      <div class="tag">
-        LAYANAN
-      </div>
-
-      <h1>
-        Layanan & Dukungan Kesehatan
-      </h1>
-
-      <p>
-        Informasi layanan dan dukungan kesehatan
-        yang dapat diperbarui sesuai data resmi
-        satuan.
-      </p>
+      </nav>
 
     </div>
 
   </header>
 
 
-  <!-- =====================================================
-       LAYANAN UTAMA
-       ===================================================== -->
+  <!-- =========================
+       HEADER HALAMAN
+  ========================== -->
+  <section class="pagehead">
 
-  <main class="content">
+    <div class="wrap">
 
-    <section>
+      <span class="eyebrow">
+        LAYANAN
+      </span>
 
-      <div class="wrap">
+      <h1 id="judul-layanan">
+        Layanan DENKESYAH MADIUN
+      </h1>
 
-        <div class="eyebrow">
-          Layanan Kesehatan
-        </div>
+      <p id="deskripsi-layanan">
+        Memuat informasi layanan...
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       DAFTAR LAYANAN
+  ========================== -->
+  <section>
+
+    <div class="wrap">
+
+      <div class="section-title">
+
+        <span class="eyebrow">
+          PELAYANAN
+        </span>
 
         <h2>
-          Layanan DENKESYAH MADIUN
+          Layanan Kesehatan
         </h2>
 
         <p class="lead">
-          Halaman ini disiapkan untuk menyampaikan
-          informasi mengenai pelayanan, dukungan,
-          dan pembinaan kesehatan berdasarkan
-          informasi resmi satuan.
+          Informasi layanan ditampilkan berdasarkan
+          data resmi yang tersedia.
         </p>
 
-
-        <div class="cards">
-
-          <!-- Layanan 1 -->
-
-          <div class="card">
-
-            <div class="icon">
-              +
-            </div>
-
-            <h3>
-              Pelayanan Kesehatan
-            </h3>
-
-            <p>
-              Informasi mengenai pelayanan kesehatan
-              yang tersedia sesuai tugas dan
-              ketentuan yang berlaku.
-            </p>
-
-          </div>
+      </div>
 
 
-          <!-- Layanan 2 -->
+      <!--
+        Kartu layanan akan dibuat
+        otomatis dari layanan.json
+      -->
 
-          <div class="card">
+      <div
+        class="cards"
+        id="daftar-layanan"
+      >
 
-            <div class="icon">
-              +
-            </div>
-
-            <h3>
-              Dukungan Kesehatan
-            </h3>
-
-            <p>
-              Informasi dukungan kesehatan dalam
-              pelaksanaan tugas dan kegiatan
-              satuan.
-            </p>
-
-          </div>
-
-
-          <!-- Layanan 3 -->
-
-          <div class="card">
-
-            <div class="icon">
-              +
-            </div>
-
-            <h3>
-              Pembinaan Kesehatan
-            </h3>
-
-            <p>
-              Informasi kegiatan pembinaan kesehatan
-              yang dilaksanakan sesuai program
-              dan ketentuan resmi.
-            </p>
-
-          </div>
-
+        <div class="note">
+          Memuat data layanan...
         </div>
 
       </div>
 
-    </section>
+    </div>
+
+  </section>
 
 
-    <!-- =================================================
-         INFORMASI LAYANAN
-         ================================================= -->
+  <!-- =========================
+       INFORMASI LAYANAN
+  ========================== -->
+  <section class="cream">
 
-    <section class="cream">
+    <div class="wrap">
 
-      <div class="wrap">
+      <div class="section-title">
 
-        <div class="eyebrow">
-          Informasi
-        </div>
+        <span class="eyebrow">
+          INFORMASI
+        </span>
 
         <h2>
           Informasi Layanan
         </h2>
 
-        <p class="lead">
-          Rincian layanan dapat dikembangkan sesuai
-          kebutuhan website dan data resmi yang
-          tersedia.
-        </p>
+      </div>
 
 
-        <div class="cards">
+      <div class="cards">
 
-          <div class="card">
 
-            <div class="icon">
-              01
-            </div>
+        <!-- JENIS PELAYANAN -->
 
-            <h3>
-              Jenis Pelayanan
-            </h3>
+        <article class="card">
 
-            <p>
-              Daftar jenis pelayanan dapat ditambahkan
-              di bagian ini.
-            </p>
-
+          <div class="icon">
+            01
           </div>
 
+          <span class="tag">
+            INFORMASI
+          </span>
 
-          <div class="card">
+          <h3>
+            Jenis Pelayanan
+          </h3>
 
-            <div class="icon">
-              02
-            </div>
+          <p id="jenis-pelayanan">
+            Memuat informasi...
+          </p>
 
-            <h3>
-              Persyaratan
-            </h3>
+        </article>
 
-            <p>
-              Informasi mengenai persyaratan atau
-              ketentuan pelayanan dapat ditambahkan
-              setelah data resmi tersedia.
-            </p>
 
+        <!-- PERSYARATAN -->
+
+        <article class="card">
+
+          <div class="icon">
+            02
           </div>
 
+          <span class="tag">
+            INFORMASI
+          </span>
 
-          <div class="card">
+          <h3>
+            Persyaratan
+          </h3>
 
-            <div class="icon">
-              03
-            </div>
+          <p id="persyaratan">
+            Memuat informasi...
+          </p>
 
-            <h3>
-              Informasi Tambahan
-            </h3>
+        </article>
 
-            <p>
-              Informasi tambahan mengenai layanan
-              dapat ditampilkan pada bagian ini.
-            </p>
 
+        <!-- INFORMASI TAMBAHAN -->
+
+        <article class="card">
+
+          <div class="icon">
+            03
           </div>
 
-        </div>
+          <span class="tag">
+            INFORMASI
+          </span>
+
+          <h3>
+            Informasi Tambahan
+          </h3>
+
+          <p id="informasi-tambahan">
+            Memuat informasi...
+          </p>
+
+        </article>
+
 
       </div>
 
-    </section>
+    </div>
+
+  </section>
 
 
-    <!-- =================================================
-         DUKUNGAN KESEHATAN
-         ================================================= -->
+  <!-- =========================
+       DUKUNGAN KESEHATAN
+  ========================== -->
+  <section>
 
-    <section>
+    <div class="wrap content">
 
-      <div class="wrap grid">
+      <div>
 
-        <div>
-
-          <div class="eyebrow">
-            Dukungan
-          </div>
-
-          <h2>
-            Dukungan Kesehatan
-          </h2>
-
-          <p class="lead">
-            Bagian ini dapat digunakan untuk
-            menjelaskan dukungan kesehatan yang
-            dilaksanakan oleh DENKESYAH MADIUN.
-          </p>
-
-          <div class="note">
-            Isi bagian ini akan disesuaikan dengan
-            informasi resmi yang diberikan oleh
-            satuan.
-          </div>
-
-        </div>
-
-
-        <div class="profile">
-
-          <img
-            src="images/logo.png"
-            alt="Logo DENKESYAH MADIUN"
-            class="profile-logo"
-          >
-
-          <strong>
-            Dukungan Kesehatan
-          </strong>
-
-          <p>
-            Informasi kegiatan dukungan kesehatan
-            dapat ditambahkan di sini.
-          </p>
-
-          <p>
-            Dokumentasi foto dan informasi kegiatan
-            nantinya dapat dikelola melalui folder
-            konten website.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =================================================
-         CATATAN
-         ================================================= -->
-
-    <section class="cream">
-
-      <div class="wrap">
-
-        <div class="eyebrow">
-          Catatan
-        </div>
+        <span class="eyebrow">
+          DUKUNGAN KESEHATAN
+        </span>
 
         <h2>
-          Informasi Resmi
+          Dukungan Kesehatan
         </h2>
 
-        <p class="lead">
-          Seluruh informasi layanan yang ditampilkan
-          pada website sebaiknya menggunakan data
-          resmi dan terbaru dari DENKESYAH MADIUN.
+        <p>
+          Informasi mengenai dukungan kesehatan
+          DENKESYAH MADIUN akan disajikan berdasarkan
+          data dan informasi resmi.
         </p>
 
         <div class="note">
-          Konten pada halaman ini masih berupa
-          struktur awal dan dapat diperbarui
-          kemudian sesuai data resmi satuan.
+
+          Informasi pada halaman ini dapat diperbarui
+          melalui file data layanan.
+
         </div>
 
       </div>
 
-    </section>
 
-  </main>
+      <div class="profile-logo">
+
+        <img
+          src="images/logo.png"
+          alt="Logo DENKESYAH MADIUN"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
 
 
-  <!-- =====================================================
+  <!-- =========================
+       INFORMASI RESMI
+  ========================== -->
+  <section class="cream">
+
+    <div class="wrap content">
+
+      <div>
+
+        <span class="eyebrow">
+          INFORMASI RESMI
+        </span>
+
+        <h2>
+          Informasi Layanan
+        </h2>
+
+        <p>
+          Informasi pelayanan dapat diperbarui
+          sesuai dengan ketentuan dan informasi resmi
+          yang berlaku.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
        FOOTER
-       ===================================================== -->
-
+  ========================== -->
   <footer>
 
-    <div class="wrap foot">
+    <div class="foot wrap">
 
-      <span>
-        © 2026 DENKESYAH MADIUN
-      </span>
 
-      <span>
-        Detasemen Kesehatan TNI Angkatan Darat
-      </span>
+      <div>
+
+        <strong>
+          DENKESYAH MADIUN
+        </strong>
+
+        <p>
+          Informasi dan layanan resmi
+          DENKESYAH MADIUN.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <strong>
+          Kontak
+        </strong>
+
+        <p>
+          JL. Tanjung Manis No. 17,
+          Manisrejo, Taman, Madiun
+        </p>
+
+        <p>
+          Instagram: @denkesyahmadiun
+        </p>
+
+      </div>
+
 
     </div>
 
   </footer>
 
-<script>
-  fetch("data/layanan.json")
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("File layanan.json tidak ditemukan.");
-      }
 
-      return response.json();
-    })
+  <!-- =========================
+       JAVASCRIPT
+       MEMUAT DATA JSON
+  ========================== -->
 
-    .then(data => {
+  <script>
 
-      console.log("Data layanan berhasil dimuat:", data);
+    fetch("data/layanan.json")
 
-    })
+      .then(function(response) {
 
-    .catch(error => {
+        if (!response.ok) {
 
-      console.error("Gagal memuat data layanan:", error);
+          throw new Error(
+            "File layanan.json tidak ditemukan."
+          );
 
-    });
-</script>
+        }
+
+        return response.json();
+
+      })
+
+
+      .then(function(data) {
+
+
+        /*
+          =========================
+          HEADER
+        =========================
+        */
+
+        document.getElementById(
+          "judul-layanan"
+        ).textContent = data.judul;
+
+
+        document.getElementById(
+          "deskripsi-layanan"
+        ).textContent = data.deskripsi;
+
+
+
+        /*
+          =========================
+          DAFTAR LAYANAN
+        =========================
+        */
+
+        const daftarLayanan =
+          document.getElementById(
+            "daftar-layanan"
+          );
+
+
+        daftarLayanan.innerHTML = "";
+
+
+        data.layanan.forEach(
+          function(item, index) {
+
+
+            const nomor =
+              String(index + 1).padStart(
+                2,
+                "0"
+              );
+
+
+            const kartu =
+              document.createElement(
+                "article"
+              );
+
+
+            kartu.className = "card";
+
+
+            kartu.innerHTML = `
+
+              <div class="icon">
+                ${nomor}
+              </div>
+
+              <span class="tag">
+                LAYANAN
+              </span>
+
+              <h3>
+                ${item.judul}
+              </h3>
+
+              <p>
+                ${item.deskripsi}
+              </p>
+
+            `;
+
+
+            daftarLayanan.appendChild(
+              kartu
+            );
+
+
+          }
+        );
+
+
+
+        /*
+          =========================
+          INFORMASI LAYANAN
+        =========================
+        */
+
+        document.getElementById(
+          "jenis-pelayanan"
+        ).textContent =
+          data.informasi_layanan.jenis_pelayanan;
+
+
+        document.getElementById(
+          "persyaratan"
+        ).textContent =
+          data.informasi_layanan.persyaratan;
+
+
+        document.getElementById(
+          "informasi-tambahan"
+        ).textContent =
+          data.informasi_layanan.informasi_tambahan;
+
+
+      })
+
+
+      /*
+        =========================
+        JIKA TERJADI ERROR
+      =========================
+      */
+
+      .catch(function(error) {
+
+        console.error(error);
+
+
+        document.getElementById(
+          "daftar-layanan"
+        ).innerHTML = `
+
+          <div class="note">
+
+            Data layanan belum dapat dimuat.
+
+          </div>
+
+        `;
+
+      });
+
+  </script>
+
+
 </body>
 </html>
