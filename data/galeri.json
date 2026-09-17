@@ -1,10 +1,19 @@
 {
   "judul": "Galeri Kegiatan",
   "deskripsi": "Kumpulan dokumentasi foto kegiatan resmi DENKESYAH MADIUN.",
+  "kategori": [
+    "Semua",
+    "Kegiatan",
+    "Pelayanan",
+    "Pembinaan",
+    "Dokumentasi"
+  ],
   "galeri": [
     {
+      "kategori": "Dokumentasi",
       "judul": "Dokumentasi DENKESYAH MADIUN",
-      "deskripsi": "Dokumentasi kegiatan resmi DENKESYAH MADIUN.",
+      "deskripsi": "Dokumentasi resmi DENKESYAH MADIUN.",
+      "tanggal": "17 September 2026",
       "gambar": "images/galeri/denkes.jpg"
     }
   ]
