@@ -1,1285 +1,918 @@
+```html
 <!DOCTYPE html>
-
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>DENKESYAH MADIUN</title>
-
-<meta
-name="description"
-content="Website resmi DENKESYAH MADIUN"
-
->
+  <title>DENKESYAH MADIUN | Beranda</title>
 
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-
-    /* =====================================================
-       BERANDA MODERN DENKESYAH MADIUN
-       ===================================================== */
-
-    * {
-      box-sizing: border-box;
-    }
-
-
-    /* ================= HERO ================= */
+    /* =========================
+       BERANDA MODERN
+       ========================= */
 
     .modern-hero {
       position: relative;
-      min-height: 720px;
-
+      min-height: 620px;
       display: flex;
       align-items: center;
-
       overflow: hidden;
-
       color: #ffffff;
-
       background: #173b2b;
     }
 
-
     /* FOTO BACKGROUND */
-
     .modern-hero-photo {
       position: absolute;
-
       inset: 0;
 
-      background-image:
-        url("images/galeri/tampak_depan.jpg");
-
+      background-image: url("images/galeri/tampak_depan.jpeg");
       background-size: cover;
-
       background-position: center center;
-
       background-repeat: no-repeat;
 
       opacity: 0.72;
-
       z-index: 0;
-
-      transform: scale(1.02);
     }
 
-
-    /* OVERLAY HIJAU TRANSPARAN */
-
+    /* LAPISAN HIJAU TRANSPARAN */
     .modern-hero-overlay {
       position: absolute;
-
       inset: 0;
-
-      z-index: 1;
 
       background:
         linear-gradient(
           90deg,
-          rgba(9,34,25,0.78) 0%,
-          rgba(9,34,25,0.48) 42%,
-          rgba(9,34,25,0.22) 75%,
-          rgba(9,34,25,0.35) 100%
+          rgba(9, 34, 25, 0.92) 0%,
+          rgba(23, 59, 43, 0.78) 45%,
+          rgba(23, 59, 43, 0.45) 100%
         );
+
+      z-index: 1;
     }
-
-
-    /* ISI HERO */
 
     .modern-hero-content {
       position: relative;
-
       z-index: 2;
-
       width: 100%;
-
-      padding-top: 100px;
-
-      padding-bottom: 160px;
+      padding: 90px 0 70px;
     }
 
+    .modern-hero-text {
+      max-width: 760px;
+    }
 
-    /* LABEL */
-
-    .modern-label {
+    .modern-hero .eyebrow {
       display: inline-block;
+      margin-bottom: 18px;
+      padding: 8px 16px;
 
-      padding: 9px 16px;
+      border: 1px solid rgba(198, 162, 75, 0.8);
+      border-radius: 30px;
 
-      margin-bottom: 22px;
+      background: rgba(9, 34, 25, 0.35);
+      color: #f1d98c;
 
-      border-left: 3px solid #c6a24b;
-
-      background: rgba(9,34,25,0.65);
-
-      color: #e3c76f;
-
-      font-size: 12px;
-
+      font-size: 13px;
       font-weight: 700;
-
       letter-spacing: 2px;
+      text-transform: uppercase;
     }
-
-
-    /* JUDUL */
 
     .modern-hero h1 {
-      max-width: 800px;
+      margin: 0 0 15px;
 
-      margin: 0 0 22px;
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: 1px;
 
-      color: #ffffff;
-
-      font-size: clamp(44px, 6vw, 78px);
-
-      line-height: 1.02;
-
-      letter-spacing: -2px;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.35);
     }
-
 
     .modern-hero h1 span {
-      color: #e0c46b;
+      display: block;
+      color: #f1d98c;
     }
 
-
-    /* DESKRIPSI */
-
     .modern-hero-description {
-      max-width: 620px;
+      max-width: 650px;
+      margin: 0 0 30px;
 
-      margin: 0 0 32px;
-
-      color: rgba(255,255,255,0.9);
-
-      font-size: 17px;
-
+      color: rgba(255,255,255,0.92);
+      font-size: 19px;
       line-height: 1.8;
     }
 
-
-    /* BUTTON */
-
-    .modern-buttons {
+    .modern-hero-buttons {
       display: flex;
-
       flex-wrap: wrap;
-
-      gap: 12px;
+      gap: 14px;
+      margin-bottom: 45px;
     }
 
-
-    .modern-button {
+    .modern-btn {
       display: inline-flex;
-
       align-items: center;
-
       justify-content: center;
 
-      min-width: 145px;
+      min-width: 150px;
+      padding: 14px 24px;
 
-      padding: 14px 23px;
-
-      border: 1px solid transparent;
+      border-radius: 8px;
 
       text-decoration: none;
-
-      font-size: 13px;
-
       font-weight: 700;
 
-      letter-spacing: 0.5px;
-
-      transition: 0.25s ease;
+      transition: all 0.25s ease;
     }
 
-
-    .modern-button-gold {
+    .modern-btn-gold {
       background: #c6a24b;
-
       color: #17221d;
     }
 
-
-    .modern-button-gold:hover {
-      background: #e0c46b;
-
-      transform: translateY(-2px);
+    .modern-btn-gold:hover {
+      transform: translateY(-3px);
+      background: #d8b75e;
     }
 
-
-    .modern-button-outline {
-      border-color: rgba(255,255,255,0.65);
-
+    .modern-btn-outline {
+      border: 1px solid rgba(255,255,255,0.75);
       background: rgba(255,255,255,0.08);
-
       color: #ffffff;
-
       backdrop-filter: blur(5px);
     }
 
-
-    .modern-button-outline:hover {
-      background: #ffffff;
-
-      color: #173b2b;
-
-      transform: translateY(-2px);
+    .modern-btn-outline:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,0.16);
     }
 
-
-    /* ================= INFO BAWAH HERO ================= */
-
-    .modern-hero-info {
-      position: absolute;
-
-      right: 0;
-
-      bottom: 0;
-
-      left: 0;
-
-      z-index: 3;
-
-      background: rgba(9,34,25,0.78);
-
-      border-top:
-        1px solid rgba(255,255,255,0.15);
-
-      backdrop-filter: blur(8px);
-    }
-
-
-    .modern-hero-info-inner {
-      min-height: 100px;
-
+    /* INFO BAR */
+    .hero-info {
       display: grid;
+      grid-template-columns: repeat(3, 1fr);
 
-      grid-template-columns:
-        1fr 1px 1fr;
+      max-width: 850px;
 
-      align-items: center;
-
-      gap: 30px;
+      border-top: 1px solid rgba(255,255,255,0.25);
+      padding-top: 25px;
     }
 
-
-    .modern-info-line {
-      width: 1px;
-
-      height: 42px;
-
-      background: rgba(255,255,255,0.25);
+    .hero-info-item {
+      padding-right: 25px;
     }
 
-
-    .modern-info-label {
-      display: block;
-
-      margin-bottom: 6px;
-
-      color: #b9c2bd;
-
-      font-size: 10px;
-
-      letter-spacing: 2px;
+    .hero-info-item:not(:last-child) {
+      border-right: 1px solid rgba(255,255,255,0.2);
+      margin-right: 25px;
     }
 
+    .hero-info-title {
+      margin-bottom: 5px;
 
-    .modern-info-title {
-      color: #ffffff;
-
+      color: #f1d98c;
       font-size: 13px;
-
       font-weight: 700;
-
       letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
-
-    /* ================= SECTION ================= */
-
-    .modern-section {
-      padding: 95px 0;
-
-      background: #ffffff;
-    }
-
-
-    .modern-heading {
-      max-width: 700px;
-
-      margin-bottom: 48px;
-    }
-
-
-    .modern-eyebrow {
-      margin-bottom: 10px;
-
-      color: #c6a24b;
-
-      font-size: 11px;
-
-      font-weight: 700;
-
-      letter-spacing: 2px;
-    }
-
-
-    .modern-heading h2 {
-      margin: 0 0 15px;
-
-      color: #173b2b;
-
-      font-size: 36px;
-
-      line-height: 1.2;
-    }
-
-
-    .modern-heading p {
-      margin: 0;
-
-      color: #66736c;
-
-      font-size: 16px;
-
-      line-height: 1.8;
-    }
-
-
-    /* ================= MENU UTAMA ================= */
-
-    .modern-menu-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 20px;
-    }
-
-
-    .modern-menu-card {
-      position: relative;
-
-      display: block;
-
-      padding: 30px;
-
-      min-height: 210px;
-
-      border:
-        1px solid #e0e6e1;
-
-      background: #ffffff;
-
-      text-decoration: none;
-
-      color: #17221d;
-
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
-    }
-
-
-    .modern-menu-card:hover {
-      transform: translateY(-6px);
-
-      border-color: #c6a24b;
-
-      box-shadow:
-        0 18px 40px rgba(0,0,0,0.08);
-    }
-
-
-    .modern-menu-number {
-      margin-bottom: 25px;
-
-      color: #c6a24b;
-
-      font-size: 12px;
-
-      font-weight: 700;
-
-      letter-spacing: 2px;
-    }
-
-
-    .modern-menu-card h3 {
-      margin: 0 0 10px;
-
-      color: #173b2b;
-
-      font-size: 22px;
-    }
-
-
-    .modern-menu-card p {
-      margin: 0;
-
-      color: #66736c;
-
+    .hero-info-text {
+      color: rgba(255,255,255,0.9);
       font-size: 14px;
-
-      line-height: 1.7;
+      line-height: 1.5;
     }
 
+    /* =========================
+       SECTION BERANDA
+       ========================= */
 
-    .modern-menu-arrow {
-      position: absolute;
-
-      right: 25px;
-
-      bottom: 23px;
-
-      color: #c6a24b;
-
-      font-size: 22px;
-
-      transition: 0.25s ease;
+    .home-section {
+      padding: 80px 0;
+      background: #ffffff;
     }
 
-
-    .modern-menu-card:hover
-    .modern-menu-arrow {
-      transform: translateX(5px);
-    }
-
-
-    /* ================= GALERI ================= */
-
-    .modern-gallery-section {
-      padding: 95px 0;
-
+    .home-section.cream-section {
       background: #f5f3eb;
     }
 
-
-    .modern-gallery-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 22px;
+    .section-heading {
+      max-width: 750px;
+      margin-bottom: 40px;
     }
 
+    .section-heading .eyebrow {
+      display: inline-block;
+      margin-bottom: 10px;
 
-    .modern-gallery-card {
-      display: block;
+      color: #173b2b;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
 
-      overflow: hidden;
+    .section-heading h2 {
+      margin-bottom: 15px;
+    }
+
+    /* KARTU */
+    .home-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .home-card {
+      padding: 30px;
+
+      border: 1px solid #e0e6e1;
+      border-radius: 14px;
 
       background: #ffffff;
 
-      border:
-        1px solid #e0e6e1;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
 
-      text-decoration: none;
-
-      color: #17221d;
-
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+      transition: transform 0.25s ease,
+                  box-shadow 0.25s ease;
     }
 
-
-    .modern-gallery-card:hover {
+    .home-card:hover {
       transform: translateY(-5px);
-
-      box-shadow:
-        0 18px 35px rgba(0,0,0,0.1);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.10);
     }
 
+    .home-card-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-    .modern-gallery-image {
+      width: 52px;
+      height: 52px;
+      margin-bottom: 20px;
+
+      border-radius: 12px;
+
+      background: #173b2b;
+      color: #f1d98c;
+
+      font-size: 23px;
+    }
+
+    .home-card h3 {
+      margin: 0 0 10px;
+      color: #173b2b;
+    }
+
+    .home-card p {
+      margin: 0;
+      color: #66736c;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       GALERI PREVIEW
+       ========================= */
+
+    .home-gallery {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 25px;
+    }
+
+    .home-photo {
       position: relative;
-
-      height: 250px;
+      min-height: 300px;
 
       overflow: hidden;
+      border-radius: 16px;
 
       background: #dfe5e1;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
     }
 
-
-    .modern-gallery-image img {
+    .home-photo img {
       width: 100%;
-
       height: 100%;
+      min-height: 300px;
 
       display: block;
 
       object-fit: cover;
 
-      transition: transform 0.5s ease;
+      transition: transform 0.4s ease;
     }
 
-
-    .modern-gallery-card:hover
-    .modern-gallery-image img {
-      transform: scale(1.06);
+    .home-photo:hover img {
+      transform: scale(1.04);
     }
 
-
-    .modern-gallery-overlay {
+    .home-photo-caption {
       position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
 
-      inset: 0;
+      padding: 25px;
 
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      background:
-        rgba(9,34,25,0.58);
-
-      opacity: 0;
-
-      transition: opacity 0.3s ease;
-    }
-
-
-    .modern-gallery-card:hover
-    .modern-gallery-overlay {
-      opacity: 1;
-    }
-
-
-    .modern-gallery-overlay span {
-      padding: 11px 17px;
-
-      border:
-        1px solid rgba(255,255,255,0.7);
+      background: linear-gradient(
+        transparent,
+        rgba(0,0,0,0.75)
+      );
 
       color: #ffffff;
-
-      font-size: 10px;
-
-      font-weight: 700;
-
-      letter-spacing: 2px;
     }
 
-
-    .modern-gallery-info {
-      padding: 20px;
-    }
-
-
-    .modern-gallery-category {
-      margin-bottom: 7px;
-
-      color: #c6a24b;
-
-      font-size: 10px;
-
-      font-weight: 700;
-
-      letter-spacing: 1.5px;
-    }
-
-
-    .modern-gallery-info h3 {
-      margin: 0 0 8px;
-
-      color: #173b2b;
-
+    .home-photo-caption strong {
+      display: block;
+      margin-bottom: 5px;
       font-size: 18px;
     }
 
-
-    .modern-gallery-info p {
-      margin: 0 0 10px;
-
-      color: #66736c;
-
+    .home-photo-caption span {
       font-size: 13px;
-
-      line-height: 1.6;
+      opacity: 0.9;
     }
 
+    /* =========================
+       KONTAK SINGKAT
+       ========================= */
 
-    .modern-gallery-info small {
-      color: #89938e;
+    .home-contact {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 35px;
 
-      font-size: 11px;
-    }
+      padding: 45px;
 
-
-    .modern-gallery-button {
-      margin-top: 40px;
-
-      text-align: center;
-    }
-
-
-    /* ================= KONTAK ================= */
-
-    .modern-contact {
-      padding: 70px 0;
+      border-radius: 18px;
 
       background: #173b2b;
-
       color: #ffffff;
     }
 
-
-    .modern-contact-inner {
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-      gap: 35px;
-    }
-
-
-    .modern-contact-label {
-      margin-bottom: 8px;
-
-      color: #d8bc67;
-
-      font-size: 11px;
-
-      font-weight: 700;
-
-      letter-spacing: 2px;
-    }
-
-
-    .modern-contact h2 {
-      margin: 0 0 10px;
-
+    .home-contact h2 {
       color: #ffffff;
+      margin-top: 0;
     }
 
-
-    .modern-contact p {
-      margin: 0;
-
-      color: rgba(255,255,255,0.75);
-
+    .home-contact p {
+      color: rgba(255,255,255,0.85);
       line-height: 1.7;
     }
 
+    .contact-box {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      justify-content: center;
+    }
 
-    /* ================= RESPONSIVE ================= */
+    .contact-line {
+      padding: 15px 18px;
+
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 10px;
+
+      background: rgba(255,255,255,0.07);
+    }
+
+    .contact-line strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #f1d98c;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .contact-line span {
+      color: rgba(255,255,255,0.9);
+      font-size: 14px;
+    }
+
+    /* =========================
+       RESPONSIVE
+       ========================= */
 
     @media (max-width: 900px) {
 
-      .modern-menu-grid {
+      .modern-hero {
+        min-height: 600px;
+      }
+
+      .home-cards {
         grid-template-columns: 1fr;
       }
 
-
-      .modern-gallery-grid {
-        grid-template-columns:
-          repeat(2, 1fr);
+      .home-gallery {
+        grid-template-columns: 1fr;
       }
 
+      .home-contact {
+        grid-template-columns: 1fr;
+      }
     }
 
-
-    @media (max-width: 800px) {
-
-      .modern-hero {
-        min-height: 680px;
-      }
-
+    @media (max-width: 700px) {
 
       .modern-hero-content {
-        padding-top: 80px;
-
-        padding-bottom: 130px;
+        padding: 70px 0 55px;
       }
-
 
       .modern-hero h1 {
-        font-size: 52px;
+        font-size: 45px;
       }
-
-
-      .modern-hero-info {
-        display: none;
-      }
-
-
-      .modern-contact-inner {
-        flex-direction: column;
-
-        align-items: flex-start;
-      }
-
-    }
-
-
-    @media (max-width: 600px) {
-
-      .modern-hero {
-        min-height: 680px;
-      }
-
-
-      .modern-hero-photo {
-        opacity: 0.64;
-
-        background-position: center center;
-      }
-
-
-      .modern-hero-overlay {
-        background:
-          linear-gradient(
-            90deg,
-            rgba(9,34,25,0.76),
-            rgba(9,34,25,0.35)
-          );
-      }
-
-
-      .modern-hero-content {
-        padding-top: 70px;
-
-        padding-bottom: 80px;
-      }
-
-
-      .modern-hero h1 {
-        font-size: 42px;
-
-        letter-spacing: -1px;
-      }
-
 
       .modern-hero-description {
-        font-size: 15px;
+        font-size: 16px;
       }
 
-
-      .modern-gallery-grid {
+      .hero-info {
         grid-template-columns: 1fr;
+        gap: 15px;
       }
 
-
-      .modern-section,
-      .modern-gallery-section {
-        padding: 70px 0;
+      .hero-info-item {
+        padding-right: 0;
       }
 
-
-      .modern-heading h2 {
-        font-size: 30px;
+      .hero-info-item:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        margin-right: 0;
+        padding-bottom: 15px;
       }
 
+      .home-section {
+        padding: 60px 0;
+      }
+
+      .home-contact {
+        padding: 30px 25px;
+      }
     }
-
 
     @media (max-width: 480px) {
 
       .modern-hero h1 {
-        font-size: 36px;
+        font-size: 38px;
       }
 
-
-      .modern-label {
-        font-size: 10px;
-      }
-
-
-      .modern-buttons {
+      .modern-hero-buttons {
         flex-direction: column;
-
-        align-items: stretch;
       }
 
-
-      .modern-button {
+      .modern-btn {
         width: 100%;
       }
 
-
-      .modern-menu-card {
-        min-height: 190px;
+      .home-photo {
+        min-height: 250px;
       }
 
+      .home-photo img {
+        min-height: 250px;
+      }
     }
-
   </style>
-
 </head>
 
 <body>
 
-<!-- =====================================================
-     NAVBAR
-     ===================================================== -->
-
-<header class="nav">
-
-  <div class="navin">
-
-```
-<a href="index.html" class="brand">
-
-  <img
-    src="images/logo.png"
-    alt="Logo DENKESYAH MADIUN"
-    class="logo-img"
-  >
-
-  <div>
-
-    <strong>
-      DENKESYAH MADIUN
-    </strong>
-
-    <span>
-      KESEHATAN & PELAYANAN
-    </span>
-
-  </div>
-
-</a>
-
-
-<nav class="links">
-
-  <a
-    href="index.html"
-    class="active"
-  >
-    Beranda
-  </a>
-
-  <a href="profil.html">
-    Profil
-  </a>
-
-  <a href="layanan.html">
-    Layanan
-  </a>
-
-  <a href="informasi.html">
-    Informasi
-  </a>
-
-  <a href="galeri.html">
-    Galeri
-  </a>
-
-  <a href="kontak.html">
-    Kontak
-  </a>
-
-</nav>
-```
-
-  </div>
-
-</header>
-
-<!-- =====================================================
-     HERO
-     ===================================================== -->
-
-<section class="modern-hero">
-
-  <!-- FOTO GEDUNG -->
-
-  <div class="modern-hero-photo"></div>
-
-  <!-- OVERLAY -->
-
-  <div class="modern-hero-overlay"></div>
-
-  <!-- TEKS -->
-
-  <div class="wrap modern-hero-content">
-
-```
-<div class="modern-label">
-  WEBSITE RESMI
-</div>
-
-
-<h1>
-
-  DENKESYAH MADIUN
-
-  <br>
-
-  <span>
-    Kesehatan & Pelayanan
-  </span>
-
-</h1>
-
-
-<p class="modern-hero-description">
-
-  Selamat datang di website resmi
-  DENKESYAH MADIUN. Temukan informasi
-  mengenai profil, layanan, kegiatan,
-  dan dokumentasi.
-
-</p>
-
-
-<div class="modern-buttons">
-
-  <a
-    href="profil.html"
-    class="modern-button modern-button-gold"
-  >
-    Lihat Profil
-  </a>
-
-
-  <a
-    href="layanan.html"
-    class="modern-button modern-button-outline"
-  >
-    Lihat Layanan
-  </a>
-
-</div>
-```
-
-  </div>
-
-  <!-- INFORMASI BAWAH -->
-
-  <div class="modern-hero-info">
-
-```
-<div class="wrap modern-hero-info-inner">
-
-
-  <div>
-
-    <span class="modern-info-label">
-      WEBSITE RESMI
-    </span>
-
-    <strong class="modern-info-title">
-      DENKESYAH MADIUN
-    </strong>
-
-  </div>
-
-
-  <div class="modern-info-line"></div>
-
-
-  <div>
-
-    <span class="modern-info-label">
-      INFORMASI
-    </span>
-
-    <strong class="modern-info-title">
-      KESEHATAN & PELAYANAN
-    </strong>
-
-  </div>
-
-
-</div>
-```
-
-  </div>
-
-</section>
-
-<!-- =====================================================
-     TENTANG
-     ===================================================== -->
-
-<section class="modern-section">
-
-  <div class="wrap">
-
-```
-<div class="modern-heading">
-
-  <div class="modern-eyebrow">
-    TENTANG KAMI
-  </div>
-
-  <h2>
-    DENKESYAH MADIUN
-  </h2>
-
-  <p>
-    Website ini menjadi media informasi
-    mengenai profil, layanan, kegiatan,
-    dan dokumentasi DENKESYAH MADIUN.
-  </p>
-
-</div>
-
-
-
-<div class="modern-menu-grid">
-
-
-  <!-- PROFIL -->
-
-  <a
-    href="profil.html"
-    class="modern-menu-card"
-  >
-
-    <div class="modern-menu-number">
-      01
-    </div>
-
-    <h3>
-      Profil
-    </h3>
-
-    <p>
-      Mengenal profil dan informasi
-      DENKESYAH MADIUN.
-    </p>
-
-    <span class="modern-menu-arrow">
-      →
-    </span>
-
-  </a>
-
-
-
-  <!-- LAYANAN -->
-
-  <a
-    href="layanan.html"
-    class="modern-menu-card"
-  >
-
-    <div class="modern-menu-number">
-      02
-    </div>
-
-    <h3>
-      Layanan
-    </h3>
-
-    <p>
-      Informasi mengenai layanan
-      dan dukungan kesehatan.
-    </p>
-
-    <span class="modern-menu-arrow">
-      →
-    </span>
-
-  </a>
-
-
-
-  <!-- INFORMASI -->
-
-  <a
-    href="informasi.html"
-    class="modern-menu-card"
-  >
-
-    <div class="modern-menu-number">
-      03
-    </div>
-
-    <h3>
-      Informasi
-    </h3>
-
-    <p>
-      Berita dan kegiatan resmi
-      DENKESYAH MADIUN.
-    </p>
-
-    <span class="modern-menu-arrow">
-      →
-    </span>
-
-  </a>
-
-
-</div>
-```
-
-  </div>
-
-</section>
-
-<!-- =====================================================
-     GALERI
-     ===================================================== -->
-
-<section class="modern-gallery-section">
-
-  <div class="wrap">
-
-```
-<div class="modern-heading">
-
-  <div class="modern-eyebrow">
-    DOKUMENTASI
-  </div>
-
-  <h2>
-    Galeri Kegiatan
-  </h2>
-
-  <p>
-    Dokumentasi kegiatan dan aktivitas
-    DENKESYAH MADIUN.
-  </p>
-
-</div>
-
-
-<div
-  id="modern-gallery-list"
-  class="modern-gallery-grid"
->
-
-  <div class="modern-gallery-card">
-
-    <div class="modern-gallery-image">
-
-      <img
-        src="images/galeri/tampak_depan.jpg"
-        alt="DENKESYAH MADIUN"
-      >
+  <!-- =========================
+       NAVBAR
+       ========================= -->
+
+  <header class="nav">
+    <div class="navin wrap">
+
+      <a href="index.html" class="brand">
+        <img
+          src="images/logo.png"
+          alt="Logo DENKESYAH MADIUN"
+          class="logo-img"
+        >
+
+        <div>
+          <strong>DENKESYAH MADIUN</strong>
+          <small>Kesehatan & Pelayanan</small>
+        </div>
+      </a>
+
+      <nav class="links">
+        <a href="index.html" class="active">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="layanan.html">Layanan</a>
+        <a href="informasi.html">Informasi</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
 
     </div>
+  </header>
 
-    <div class="modern-gallery-info">
 
-      <div class="modern-gallery-category">
-        DOKUMENTASI
+  <!-- =========================
+       HERO
+       ========================= -->
+
+  <main>
+
+    <section class="modern-hero">
+
+      <!-- FOTO UTAMA -->
+      <div class="modern-hero-photo"></div>
+
+      <!-- OVERLAY -->
+      <div class="modern-hero-overlay"></div>
+
+      <!-- ISI HERO -->
+      <div class="modern-hero-content">
+
+        <div class="wrap">
+
+          <div class="modern-hero-text">
+
+            <div class="eyebrow">
+              DENKESYAH MADIUN
+            </div>
+
+            <h1>
+              Kesehatan
+              <span>& Pelayanan</span>
+            </h1>
+
+            <p class="modern-hero-description">
+              Selamat datang di website resmi DENKESYAH MADIUN.
+              Media informasi mengenai profil, layanan, kegiatan,
+              dokumentasi, dan informasi kesehatan.
+            </p>
+
+            <div class="modern-hero-buttons">
+
+              <a
+                href="profil.html"
+                class="modern-btn modern-btn-gold"
+              >
+                Lihat Profil
+              </a>
+
+              <a
+                href="layanan.html"
+                class="modern-btn modern-btn-outline"
+              >
+                Lihat Layanan
+              </a>
+
+            </div>
+
+
+            <!-- INFO SINGKAT -->
+
+            <div class="hero-info">
+
+              <div class="hero-info-item">
+
+                <div class="hero-info-title">
+                  Profil
+                </div>
+
+                <div class="hero-info-text">
+                  Mengenal DENKESYAH MADIUN
+                </div>
+
+              </div>
+
+
+              <div class="hero-info-item">
+
+                <div class="hero-info-title">
+                  Layanan
+                </div>
+
+                <div class="hero-info-text">
+                  Informasi pelayanan kesehatan
+                </div>
+
+              </div>
+
+
+              <div class="hero-info-item">
+
+                <div class="hero-info-title">
+                  Informasi
+                </div>
+
+                <div class="hero-info-text">
+                  Berita dan kegiatan resmi
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <h3>
-        DENKESYAH MADIUN
-      </h3>
+    </section>
 
-      <p>
-        Dokumentasi gedung DENKESYAH MADIUN.
-      </p>
+
+    <!-- =========================
+         TENTANG
+         ========================= -->
+
+    <section class="home-section">
+
+      <div class="wrap">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            Tentang Kami
+          </div>
+
+          <h2>
+            DENKESYAH MADIUN
+          </h2>
+
+          <p class="lead">
+            Informasi resmi mengenai profil, pelayanan,
+            kegiatan, dan dokumentasi DENKESYAH MADIUN
+            disajikan melalui website ini.
+          </p>
+
+        </div>
+
+
+        <div class="home-cards">
+
+
+          <div class="home-card">
+
+            <div class="home-card-icon">
+              ✚
+            </div>
+
+            <h3>
+              Pelayanan Kesehatan
+            </h3>
+
+            <p>
+              Informasi mengenai pelayanan kesehatan
+              yang tersedia dapat dilihat pada halaman
+              layanan.
+            </p>
+
+          </div>
+
+
+          <div class="home-card">
+
+            <div class="home-card-icon">
+              ★
+            </div>
+
+            <h3>
+              Kegiatan
+            </h3>
+
+            <p>
+              Dokumentasi kegiatan dan informasi resmi
+              dapat diperbarui melalui halaman informasi
+              dan galeri.
+            </p>
+
+          </div>
+
+
+          <div class="home-card">
+
+            <div class="home-card-icon">
+              ▣
+            </div>
+
+            <h3>
+              Informasi Resmi
+            </h3>
+
+            <p>
+              Website ini menjadi media penyampaian
+              informasi resmi DENKESYAH MADIUN kepada
+              masyarakat dan pihak terkait.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOTO UTAMA / GALERI
+         ========================= -->
+
+    <section class="home-section cream-section">
+
+      <div class="wrap">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            Dokumentasi
+          </div>
+
+          <h2>
+            Sekilas DENKESYAH MADIUN
+          </h2>
+
+          <p class="lead">
+            Dokumentasi visual DENKESYAH MADIUN.
+          </p>
+
+        </div>
+
+
+        <div class="home-gallery">
+
+          <div class="home-photo">
+
+            <!-- FOTO YANG BENAR -->
+            <img
+              src="images/galeri/tampak_depan.jpeg"
+              alt="Tampak depan DENKESYAH MADIUN"
+            >
+
+            <div class="home-photo-caption">
+
+              <strong>
+                DENKESYAH MADIUN
+              </strong>
+
+              <span>
+                Dokumentasi tampak depan
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="home-photo">
+
+            <img
+              src="images/galeri/denkes.jpg"
+              alt="Dokumentasi DENKESYAH MADIUN"
+            >
+
+            <div class="home-photo-caption">
+
+              <strong>
+                Dokumentasi
+              </strong>
+
+              <span>
+                Galeri kegiatan DENKESYAH MADIUN
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div style="margin-top:30px;">
+
+          <a
+            href="galeri.html"
+            class="btn gold"
+          >
+            Lihat Semua Galeri
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         KONTAK
+         ========================= -->
+
+    <section class="home-section">
+
+      <div class="wrap">
+
+        <div class="home-contact">
+
+          <div>
+
+            <div class="eyebrow" style="color:#f1d98c;">
+              Hubungi Kami
+            </div>
+
+            <h2>
+              Informasi Kontak
+            </h2>
+
+            <p>
+              Untuk informasi lebih lanjut mengenai
+              DENKESYAH MADIUN, silakan melihat halaman
+              kontak resmi.
+            </p>
+
+            <a
+              href="kontak.html"
+              class="modern-btn modern-btn-gold"
+            >
+              Halaman Kontak
+            </a>
+
+          </div>
+
+
+          <div class="contact-box">
+
+            <div class="contact-line">
+
+              <strong>
+                Alamat
+              </strong>
+
+              <span>
+                JL. Tanjung Manis No. 17,
+                Manisrejo, Taman, Madiun
+              </span>
+
+            </div>
+
+
+            <div class="contact-line">
+
+              <strong>
+                Instagram
+              </strong>
+
+              <span>
+                @denkesyahmadiun
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer>
+
+    <div class="foot wrap">
+
+      <div>
+        <strong>
+          DENKESYAH MADIUN
+        </strong>
+
+        <p>
+          Website informasi resmi DENKESYAH MADIUN.
+        </p>
+      </div>
+
+      <div>
+        <small>
+          © 2026 DENKESYAH MADIUN
+        </small>
+      </div>
 
     </div>
 
-  </div>
-
-
-</div>
-
-
-<div class="modern-gallery-button">
-
-  <a
-    href="galeri.html"
-    class="modern-button modern-button-gold"
-  >
-    Lihat Semua Galeri
-  </a>
-
-</div>
-```
-
-  </div>
-
-</section>
-
-<!-- =====================================================
-     KONTAK
-     ===================================================== -->
-
-<section class="modern-contact">
-
-  <div class="wrap modern-contact-inner">
-
-```
-<div>
-
-  <div class="modern-contact-label">
-    HUBUNGI KAMI
-  </div>
-
-  <h2>
-    DENKESYAH MADIUN
-  </h2>
-
-  <p>
-    JL. Tanjung Manis No. 17,
-    Manisrejo, Taman, Madiun
-  </p>
-
-</div>
-
-
-<a
-  href="kontak.html"
-  class="modern-button modern-button-outline"
->
-  Informasi Kontak
-</a>
-```
-
-  </div>
-
-</section>
-
-<!-- =====================================================
-     FOOTER
-     ===================================================== -->
-
-<footer>
-
-  <div class="wrap foot">
-
-```
-<div>
-
-  <strong>
-    DENKESYAH MADIUN
-  </strong>
-
-  <p>
-    Website informasi resmi
-    DENKESYAH MADIUN.
-  </p>
-
-</div>
-
-
-<div>
-
-  <p>
-    © 2026 DENKESYAH MADIUN
-  </p>
-
-</div>
-```
-
-  </div>
-
-</footer>
+  </footer>
 
 </body>
 </html>
+```
