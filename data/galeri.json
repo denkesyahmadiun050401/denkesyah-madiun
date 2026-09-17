@@ -1,5 +1,11 @@
 {
   "judul": "Galeri Kegiatan",
   "deskripsi": "Kumpulan dokumentasi foto kegiatan resmi DENKESYAH MADIUN.",
-  "galeri": []
+  "galeri": [
+    {
+      "judul": "Dokumentasi Kegiatan",
+      "deskripsi": "Dokumentasi kegiatan DENKESYAH MADIUN.",
+      "gambar": "images/galeri/denkes.jpg"
+    }
+  ]
 }
