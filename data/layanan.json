@@ -1,0 +1,23 @@
+{
+  "judul": "Layanan DENKESYAH MADIUN",
+  "deskripsi": "Informasi mengenai layanan dan dukungan kesehatan yang tersedia.",
+  "layanan": [
+    {
+      "judul": "Pelayanan Kesehatan",
+      "deskripsi": "Informasi pelayanan kesehatan akan ditampilkan berdasarkan ketentuan dan data resmi."
+    },
+    {
+      "judul": "Dukungan Kesehatan",
+      "deskripsi": "Informasi dukungan kesehatan dalam pelaksanaan tugas akan ditampilkan berdasarkan data resmi."
+    },
+    {
+      "judul": "Pembinaan Kesehatan",
+      "deskripsi": "Informasi pembinaan kesehatan akan ditampilkan berdasarkan data resmi."
+    }
+  ],
+  "informasi_layanan": {
+    "jenis_pelayanan": "Informasi jenis pelayanan akan ditambahkan.",
+    "persyaratan": "Informasi persyaratan pelayanan akan ditambahkan.",
+    "informasi_tambahan": "Informasi tambahan akan ditambahkan."
+  }
+}
