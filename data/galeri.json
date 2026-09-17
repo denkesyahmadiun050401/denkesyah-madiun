@@ -23,5 +23,12 @@
       "tanggal": "17 September 2026",
       "gambar": "images/galeri/denkes.jpg"
     }
+    {
+      "kategori": "Pelayanan",
+      "judul": "Layanan Pengaduan Kesdam",
+      "deskripsi": "Dokumentasi layanan pengaduan kesehatan.",
+      "tanggal": "17 September 2026",
+      "gambar": "images/galeri/pelayanan/LAYANAN_PENGADUAN_KESDAM.jpg"
+    }
   ]
 }
