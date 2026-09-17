@@ -11,600 +11,627 @@
 
   <style>
     /* =========================
-       FILTER KATEGORI
-       ========================= */
+       HEADER HALAMAN
+    ========================== */
+    .gallery-header {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 35px;
+    }
 
+    .gallery-header h1 {
+      margin-bottom: 12px;
+    }
+
+    .gallery-header p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* =========================
+       FILTER
+    ========================== */
     .gallery-filter {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
 
     .filter-btn {
-      border: 1px solid #c6a24b;
-      background: white;
-      color: #173b2b;
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--g);
       padding: 10px 18px;
-      border-radius: 6px;
+      border-radius: 999px;
       cursor: pointer;
-      font-weight: 600;
-      transition: 0.2s;
+      font-family: inherit;
+      font-weight: 700;
+      transition: 0.2s ease;
     }
 
-    .filter-btn:hover,
+    .filter-btn:hover {
+      background: var(--g);
+      color: var(--white);
+      border-color: var(--g);
+    }
+
     .filter-btn.active {
-      background: #173b2b;
-      color: white;
+      background: var(--g);
+      color: var(--white);
+      border-color: var(--g);
     }
-
 
     /* =========================
-       GALERI
-       ========================= */
-
-    .gallery-card {
-      overflow: hidden;
-      border-radius: 10px;
-      background: white;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+       GRID GALERI
+    ========================== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
 
-    .gallery-card img {
+    .gallery-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 35px rgba(0,0,0,0.10);
+    }
+
+    .gallery-image {
       width: 100%;
       height: 240px;
       object-fit: cover;
       display: block;
       cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-card img:hover {
-      transform: scale(1.04);
+      background: #e8ece9;
     }
 
     .gallery-info {
-      padding: 18px;
-    }
-
-    .gallery-info h3 {
-      margin: 8px 0;
+      padding: 20px;
     }
 
     .gallery-category {
       display: inline-block;
       font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      color: #c6a24b;
+      font-weight: 800;
+      color: var(--g);
+      background: #edf2ee;
+      padding: 6px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .gallery-info h3 {
+      margin: 0 0 8px;
+      color: var(--ink);
+      font-size: 20px;
     }
 
     .gallery-info p {
+      margin: 0 0 12px;
+      color: var(--muted);
       line-height: 1.6;
+      font-size: 14px;
     }
 
     .gallery-date {
-      display: block;
-      margin-top: 10px;
-      color: #66736c;
+      color: var(--muted);
       font-size: 13px;
     }
 
+    /* =========================
+       PESAN KOSONG
+    ========================== */
+    .gallery-empty {
+      text-align: center;
+      padding: 50px 20px;
+      background: var(--cream);
+      border-radius: 18px;
+      color: var(--muted);
+    }
 
     /* =========================
        LIGHTBOX
-       ========================= */
-
+    ========================== */
     .lightbox {
       display: none;
       position: fixed;
-      z-index: 9999;
       inset: 0;
-
+      z-index: 9999;
       background: rgba(0,0,0,0.88);
-
       align-items: center;
       justify-content: center;
-
-      padding: 20px;
+      padding: 25px;
     }
 
     .lightbox.show {
       display: flex;
     }
 
-    .lightbox img {
-      max-width: 95%;
-      max-height: 90vh;
+    .lightbox-content {
+      position: relative;
+      max-width: 1100px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .lightbox-image {
+      max-width: 100%;
+      max-height: 82vh;
       object-fit: contain;
-      border-radius: 6px;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .lightbox-title {
+      color: #fff;
+      margin-top: 15px;
+      font-size: 18px;
     }
 
     .lightbox-close {
-      position: absolute;
+      position: fixed;
       top: 20px;
-      right: 30px;
-
-      color: white;
-      font-size: 40px;
+      right: 25px;
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      font-size: 28px;
       cursor: pointer;
-      line-height: 1;
     }
 
+    .lightbox-close:hover {
+      background: rgba(255,255,255,0.3);
+    }
 
     /* =========================
-       PESAN ERROR
-       ========================= */
-
+       ERROR
+    ========================== */
     .gallery-error {
+      display: none;
       padding: 25px;
-      border-radius: 10px;
-      background: #f8eeee;
-      border: 1px solid #e5caca;
-      color: #6b2525;
+      border-radius: 15px;
+      background: #fff3f3;
+      border: 1px solid #e3bcbc;
+      color: #8b2f2f;
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+    @media (max-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-image {
+        height: 220px;
+      }
+
+      .filter-btn {
+        padding: 9px 14px;
+        font-size: 13px;
+      }
     }
   </style>
 </head>
-
 
 <body>
 
   <!-- =========================
        NAVBAR
-       ========================= -->
-
+  ========================== -->
   <nav class="nav">
-
-    <div class="navin wrap">
+    <div class="navin">
 
       <a href="index.html" class="brand">
-
-        <img
-          src="images/logo.png"
-          alt="Logo DENKESYAH MADIUN"
-          class="logo-img"
-        >
-
-        <div>
-          <strong>DENKESYAH MADIUN</strong>
-          <small>Detasemen Kesehatan Wilayah</small>
-        </div>
-
+        <img src="images/logo.png" alt="Logo DENKESYAH MADIUN" class="logo-img">
+        <span>DENKESYAH MADIUN</span>
       </a>
 
-
       <div class="links">
-
-        <a href="index.html">
-          Beranda
-        </a>
-
-        <a href="profil.html">
-          Profil
-        </a>
-
-        <a href="layanan.html">
-          Layanan
-        </a>
-
-        <a href="informasi.html">
-          Informasi
-        </a>
-
-        <a href="galeri.html" class="active">
-          Galeri
-        </a>
-
-        <a href="kontak.html">
-          Kontak
-        </a>
-
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="layanan.html">Layanan</a>
+        <a href="informasi.html">Informasi</a>
+        <a href="galeri.html" class="active">Galeri</a>
+        <a href="kontak.html">Kontak</a>
       </div>
 
     </div>
-
   </nav>
 
 
   <!-- =========================
-       HEADER
-       ========================= -->
+       HEADER GALERI
+  ========================== -->
+  <main>
 
-  <header class="pagehead">
+    <section class="pagehead">
+      <div class="wrap">
 
-    <div class="wrap">
+        <div class="gallery-header">
 
-      <span class="eyebrow">
-        DOKUMENTASI
-      </span>
+          <div class="eyebrow">
+            DOKUMENTASI
+          </div>
 
-      <h1 id="judul-galeri">
-        Galeri Kegiatan
-      </h1>
+          <h1 id="judul-galeri">
+            Galeri Kegiatan
+          </h1>
 
-      <p id="deskripsi-galeri">
-        Memuat informasi...
-      </p>
+          <p id="deskripsi-galeri">
+            Kumpulan dokumentasi foto kegiatan resmi DENKESYAH MADIUN.
+          </p>
 
-    </div>
-
-  </header>
-
-
-  <!-- =========================
-       GALERI
-       ========================= -->
-
-  <section>
-
-    <div class="wrap">
-
-
-      <!-- FILTER -->
-
-      <div
-        id="gallery-filter"
-        class="gallery-filter"
-      ></div>
-
-
-      <!-- DAFTAR FOTO -->
-
-      <div
-        id="daftar-galeri"
-        class="grid"
-      >
-
-        <p>
-          Memuat galeri...
-        </p>
+        </div>
 
       </div>
-
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- =========================
-       CATATAN
-       ========================= -->
+    <!-- =========================
+         ISI GALERI
+    ========================== -->
+    <section>
+      <div class="wrap">
 
-  <section class="cream">
+        <!-- FILTER -->
+        <div id="gallery-filter" class="gallery-filter"></div>
 
-    <div class="wrap">
+        <!-- ERROR -->
+        <div id="gallery-error" class="gallery-error"></div>
 
-      <div class="note">
-
-        <strong>
-          Dokumentasi Resmi
-        </strong>
-
-        <p>
-          Galeri digunakan untuk menampilkan dokumentasi
-          kegiatan dan publikasi resmi DENKESYAH MADIUN.
-        </p>
+        <!-- GALERI -->
+        <div id="gallery-grid" class="gallery-grid"></div>
 
       </div>
+    </section>
 
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       FOOTER
-       ========================= -->
-
-  <footer>
-
-    <div class="foot wrap">
-
-      <div>
-
-        <strong>
-          DENKESYAH MADIUN
-        </strong>
-
-        <p>
-          Informasi resmi dan dokumentasi kegiatan.
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <p>
-          JL. Tanjung Manis No. 17,
-          Manisrejo, Taman, Madiun
-        </p>
-
-      </div>
-
-    </div>
-
-  </footer>
+  </main>
 
 
   <!-- =========================
        LIGHTBOX
-       ========================= -->
+  ========================== -->
+  <div id="lightbox" class="lightbox">
 
-  <div
-    id="lightbox"
-    class="lightbox"
-  >
-
-    <span
+    <button
+      type="button"
       id="lightbox-close"
       class="lightbox-close"
-    >
-      &times;
-    </span>
+      aria-label="Tutup">
+      ×
+    </button>
 
-    <img
-      id="lightbox-image"
-      src=""
-      alt="Foto Galeri"
-    >
+    <div class="lightbox-content">
+
+      <img
+        id="lightbox-image"
+        class="lightbox-image"
+        src=""
+        alt="">
+
+      <div
+        id="lightbox-title"
+        class="lightbox-title">
+      </div>
+
+    </div>
 
   </div>
 
 
   <!-- =========================
-       JAVASCRIPT
-       ========================= -->
+       FOOTER
+  ========================== -->
+  <footer>
+    <div class="foot">
 
+      <div>
+        <strong>DENKESYAH MADIUN</strong>
+        <div>
+          Informasi resmi dan dokumentasi kegiatan.
+        </div>
+      </div>
+
+      <div>
+        © 2026 DENKESYAH MADIUN
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
   <script>
 
-    let semuaFoto = [];
+    /*
+      =====================================================
+      MEMBACA DATA GALERI
+      =====================================================
 
-    let kategoriAktif = "Semua";
+      Karena website berada di:
+
+      /denkesyah-madiun/
+
+      maka kita menggunakan URL relatif:
+
+      data/galeri.json
+
+      Browser akan otomatis membacanya sebagai:
+
+      /denkesyah-madiun/data/galeri.json
+    */
+
+    const DATA_URL = "data/galeri.json";
+
+    let galleryData = [];
+    let activeCategory = "Semua";
 
 
-    /* =========================
-       MEMBACA DATA GALERI
-       ========================= */
+    /* =====================================================
+       ELEMENT HTML
+    ===================================================== */
 
-    fetch("data/galeri.json")
+    const galleryGrid =
+      document.getElementById("gallery-grid");
 
-      .then(function(response) {
+    const galleryFilter =
+      document.getElementById("gallery-filter");
+
+    const galleryError =
+      document.getElementById("gallery-error");
+
+    const judulGaleri =
+      document.getElementById("judul-galeri");
+
+    const deskripsiGaleri =
+      document.getElementById("deskripsi-galeri");
+
+    const lightbox =
+      document.getElementById("lightbox");
+
+    const lightboxImage =
+      document.getElementById("lightbox-image");
+
+    const lightboxTitle =
+      document.getElementById("lightbox-title");
+
+    const lightboxClose =
+      document.getElementById("lightbox-close");
+
+
+    /* =====================================================
+       LOAD DATA
+    ===================================================== */
+
+    async function loadGallery() {
+
+      try {
+
+        const response = await fetch(DATA_URL, {
+          cache: "no-store"
+        });
 
         if (!response.ok) {
-
           throw new Error(
-            "File data/galeri.json tidak ditemukan. Status: "
-            + response.status
+            "HTTP " + response.status +
+            " - file galeri.json tidak dapat dibaca."
           );
-
         }
 
-        return response.json();
+        const data = await response.json();
 
-      })
+        /*
+          Memastikan struktur JSON benar
+        */
 
+        if (!data || typeof data !== "object") {
+          throw new Error(
+            "Format galeri.json tidak valid."
+          );
+        }
 
-      .then(function(data) {
+        /*
+          Judul halaman
+        */
 
-        /* Judul */
+        if (data.judul) {
+          judulGaleri.textContent = data.judul;
+        }
 
-        document
-          .getElementById("judul-galeri")
-          .textContent =
-            data.judul || "Galeri Kegiatan";
+        /*
+          Deskripsi halaman
+        */
 
+        if (data.deskripsi) {
+          deskripsiGaleri.textContent =
+            data.deskripsi;
+        }
 
-        /* Deskripsi */
+        /*
+          Data foto
+        */
 
-        document
-          .getElementById("deskripsi-galeri")
-          .textContent =
-            data.deskripsi || "";
+        if (!Array.isArray(data.galeri)) {
+          throw new Error(
+            'Bagian "galeri" tidak ditemukan atau bukan array.'
+          );
+        }
 
+        galleryData = data.galeri;
 
-        /* Data foto */
+        /*
+          Buat tombol kategori
+        */
 
-        semuaFoto =
-          Array.isArray(data.galeri)
-            ? data.galeri
-            : [];
+        createFilters(data.kategori);
 
+        /*
+          Tampilkan foto
+        */
 
-        /* Filter */
+        renderGallery();
 
-        const daftarKategori =
-          Array.isArray(data.kategori)
-            ? data.kategori
-            : ["Semua"];
+      }
 
-
-        buatFilter(daftarKategori);
-
-
-        /* Tampilkan semua foto */
-
-        tampilkanFoto("Semua");
-
-      })
-
-
-      .catch(function(error) {
+      catch (error) {
 
         console.error(
-          "Kesalahan Galeri:",
+          "ERROR GALERI:",
           error
         );
 
+        galleryError.style.display = "block";
 
-        document
-          .getElementById("daftar-galeri")
-          .innerHTML = `
+        galleryError.innerHTML =
+          "<strong>Galeri belum dapat dimuat.</strong><br><br>" +
+          "Terjadi masalah saat membaca data galeri.<br>" +
+          "<small>" +
+          error.message +
+          "</small>";
 
-            <div class="gallery-error">
+      }
 
-              <strong>
-                Data galeri belum dapat dimuat.
-              </strong>
-
-              <p>
-                Periksa file
-                <strong>data/galeri.json</strong>
-                dan pastikan formatnya benar.
-              </p>
-
-            </div>
-
-          `;
-
-      });
+    }
 
 
-    /* =========================
-       MEMBUAT FILTER
-       ========================= */
+    /* =====================================================
+       MEMBUAT FILTER KATEGORI
+    ===================================================== */
 
-    function buatFilter(kategori) {
+    function createFilters(categories) {
 
-      const filter =
-        document.getElementById(
-          "gallery-filter"
-        );
+      galleryFilter.innerHTML = "";
 
+      /*
+        Jika kategori tidak tersedia,
+        buat kategori otomatis dari data foto.
+      */
 
-      filter.innerHTML = "";
+      if (
+        !Array.isArray(categories) ||
+        categories.length === 0
+      ) {
 
+        categories = [
+          "Semua",
+          ...new Set(
+            galleryData.map(
+              item => item.kategori
+            )
+          )
+        ];
 
-      kategori.forEach(function(namaKategori) {
+      }
 
-        const tombol =
+      categories.forEach(function(category) {
+
+        const button =
           document.createElement("button");
 
+        button.type = "button";
 
-        tombol.type = "button";
+        button.className =
+          "filter-btn" +
+          (category === activeCategory
+            ? " active"
+            : "");
 
-        tombol.className =
-          "filter-btn";
+        button.textContent = category;
 
-
-        if (
-          namaKategori === "Semua"
-        ) {
-
-          tombol.classList.add(
-            "active"
-          );
-
-        }
-
-
-        tombol.textContent =
-          namaKategori;
-
-
-        tombol.addEventListener(
+        button.addEventListener(
           "click",
           function() {
 
+            activeCategory = category;
+
             document
-              .querySelectorAll(
-                ".filter-btn"
-              )
-              .forEach(
-                function(btn) {
+              .querySelectorAll(".filter-btn")
+              .forEach(function(btn) {
+                btn.classList.remove("active");
+              });
 
-                  btn.classList.remove(
-                    "active"
-                  );
+            button.classList.add("active");
 
-                }
-              );
-
-
-            tombol.classList.add(
-              "active"
-            );
-
-
-            kategoriAktif =
-              namaKategori;
-
-
-            tampilkanFoto(
-              namaKategori
-            );
+            renderGallery();
 
           }
         );
 
-
-        filter.appendChild(
-          tombol
-        );
+        galleryFilter.appendChild(button);
 
       });
 
     }
 
 
-    /* =========================
-       MENAMPILKAN FOTO
-       ========================= */
+    /* =====================================================
+       MENAMPILKAN GALERI
+    ===================================================== */
 
-    function tampilkanFoto(kategori) {
+    function renderGallery() {
 
-      const daftar =
-        document.getElementById(
-          "daftar-galeri"
-        );
+      galleryGrid.innerHTML = "";
 
+      /*
+        Filter berdasarkan kategori
+      */
 
-      daftar.innerHTML = "";
+      let filteredData;
 
+      if (activeCategory === "Semua") {
 
-      let fotoYangDitampilkan =
-        semuaFoto;
+        filteredData = galleryData;
 
+      } else {
 
-      if (
-        kategori !== "Semua"
-      ) {
+        filteredData =
+          galleryData.filter(function(item) {
 
-        fotoYangDitampilkan =
-          semuaFoto.filter(
-            function(item) {
+            return item.kategori === activeCategory;
 
-              return (
-                item &&
-                item.kategori ===
-                  kategori
-              );
-
-            }
-          );
+          });
 
       }
 
 
-      if (
-        fotoYangDitampilkan.length === 0
-      ) {
+      /*
+        Jika tidak ada foto
+      */
 
-        daftar.innerHTML = `
+      if (filteredData.length === 0) {
 
-          <div class="note">
-
-            <strong>
-              Belum Ada Dokumentasi
-            </strong>
-
-            <p>
-              Belum ada foto pada
-              kategori ini.
-            </p>
-
+        galleryGrid.innerHTML = `
+          <div class="gallery-empty" style="grid-column:1/-1;">
+            Belum ada dokumentasi pada kategori ini.
           </div>
-
         `;
 
         return;
@@ -612,269 +639,209 @@
       }
 
 
-      /* =========================
-         MEMBUAT KARTU FOTO
-         ========================= */
+      /*
+        Buat setiap kartu foto
+      */
 
-      fotoYangDitampilkan.forEach(
-        function(item) {
+      filteredData.forEach(function(item) {
 
-          if (!item) {
-            return;
-          }
+        const card =
+          document.createElement("article");
 
-
-          const card =
-            document.createElement(
-              "div"
-            );
+        card.className =
+          "gallery-card";
 
 
-          card.className =
-            "gallery-card";
+        /*
+          Pastikan data memiliki nilai
+        */
+
+        const image =
+          item.gambar || "";
+
+        const title =
+          item.judul ||
+          "Dokumentasi DENKESYAH MADIUN";
+
+        const description =
+          item.deskripsi ||
+          "";
+
+        const category =
+          item.kategori ||
+          "Dokumentasi";
+
+        const date =
+          item.tanggal ||
+          "";
 
 
-          /* Judul */
+        card.innerHTML = `
 
-          const judul =
-            item.judul ||
-            "Dokumentasi DENKESYAH MADIUN";
+          <img
+            src="${image}"
+            alt="${escapeHtml(title)}"
+            class="gallery-image"
+            loading="lazy">
 
+          <div class="gallery-info">
 
-          /* Deskripsi */
-
-          const deskripsi =
-            item.deskripsi ||
-            "";
-
-
-          /* Kategori */
-
-          const kategoriFoto =
-            item.kategori ||
-            "Dokumentasi";
-
-
-          /* Gambar */
-
-          const gambar =
-            item.gambar ||
-            "";
-
-
-          /* Tanggal */
-
-          const tanggal =
-            item.tanggal ||
-            "";
-
-
-          card.innerHTML = `
-
-            <img
-              src="${gambar}"
-              alt="${judul}"
-            >
-
-            <div class="gallery-info">
-
-              <span class="gallery-category">
-                ${kategoriFoto}
-              </span>
-
-              <h3>
-                ${judul}
-              </h3>
-
-              <p>
-                ${deskripsi}
-              </p>
-
-              ${
-                tanggal
-                  ? `
-                    <small class="gallery-date">
-                      ${tanggal}
-                    </small>
-                  `
-                  : ""
-              }
-
+            <div class="gallery-category">
+              ${escapeHtml(category)}
             </div>
 
-          `;
+            <h3>
+              ${escapeHtml(title)}
+            </h3>
+
+            <p>
+              ${escapeHtml(description)}
+            </p>
+
+            ${
+              date
+              ? `<div class="gallery-date">
+                   ${escapeHtml(date)}
+                 </div>`
+              : ""
+            }
+
+          </div>
+
+        `;
 
 
-          /* =========================
-             KLIK FOTO
-             ========================= */
+        /*
+          Klik foto → lightbox
+        */
 
-          const gambarElement =
-            card.querySelector(
-              "img"
+        const imageElement =
+          card.querySelector(".gallery-image");
+
+        imageElement.addEventListener(
+          "click",
+          function() {
+
+            openLightbox(
+              image,
+              title
             );
 
-
-          gambarElement.addEventListener(
-            "click",
-            function() {
-
-              bukaLightbox(
-                gambar
-              );
-
-            }
-          );
+          }
+        );
 
 
-          /* =========================
-             JIKA GAMBAR GAGAL DIMUAT
-             ========================= */
+        /*
+          Jika gambar gagal dimuat
+        */
 
-          gambarElement.addEventListener(
-            "error",
-            function() {
+        imageElement.addEventListener(
+          "error",
+          function() {
 
-              console.error(
-                "Gambar tidak ditemukan:",
-                gambar
-              );
+            imageElement.alt =
+              "Gambar tidak ditemukan";
 
+            imageElement.style.objectFit =
+              "contain";
 
-              gambarElement.style.display =
-                "none";
-
-
-              const pesan =
-                document.createElement(
-                  "div"
-                );
+          }
+        );
 
 
-              pesan.style.padding =
-                "30px";
+        galleryGrid.appendChild(card);
 
-
-              pesan.style.textAlign =
-                "center";
-
-
-              pesan.style.background =
-                "#eeeeee";
-
-
-              pesan.textContent =
-                "Foto tidak ditemukan";
-
-
-              card.insertBefore(
-                pesan,
-                card.querySelector(
-                  ".gallery-info"
-                )
-              );
-
-            }
-          );
-
-
-          daftar.appendChild(
-            card
-          );
-
-        }
-      );
+      });
 
     }
 
 
-    /* =========================
+    /* =====================================================
+       ESCAPE HTML
+       ===================================================== */
+
+    function escapeHtml(text) {
+
+      const div =
+        document.createElement("div");
+
+      div.textContent =
+        text == null
+          ? ""
+          : String(text);
+
+      return div.innerHTML;
+
+    }
+
+
+    /* =====================================================
        LIGHTBOX
-       ========================= */
+    ===================================================== */
 
-    function bukaLightbox(gambar) {
+    function openLightbox(
+      image,
+      title
+    ) {
 
-      if (!gambar) {
-        return;
-      }
+      lightboxImage.src =
+        image;
+
+      lightboxImage.alt =
+        title;
+
+      lightboxTitle.textContent =
+        title;
+
+      lightbox.classList.add("show");
+
+      document.body.style.overflow =
+        "hidden";
+
+    }
 
 
-      const lightbox =
-        document.getElementById(
-          "lightbox"
-        );
+    function closeLightbox() {
 
-
-      const image =
-        document.getElementById(
-          "lightbox-image"
-        );
-
-
-      image.src =
-        gambar;
-
-
-      lightbox.classList.add(
+      lightbox.classList.remove(
         "show"
       );
 
+      lightboxImage.src = "";
+
+      document.body.style.overflow =
+        "";
+
     }
 
 
-    /* =========================
-       TUTUP LIGHTBOX
-       ========================= */
+    lightboxClose.addEventListener(
+      "click",
+      closeLightbox
+    );
 
-    document
-      .getElementById(
-        "lightbox-close"
-      )
-      .addEventListener(
-        "click",
-        function() {
 
-          document
-            .getElementById(
-              "lightbox"
-            )
-            .classList.remove(
-              "show"
-            );
+    /*
+      Klik area gelap
+    */
 
+    lightbox.addEventListener(
+      "click",
+      function(event) {
+
+        if (
+          event.target === lightbox
+        ) {
+          closeLightbox();
         }
-      );
+
+      }
+    );
 
 
-    /* =========================
-       KLIK AREA GELAP
-       ========================= */
-
-    document
-      .getElementById(
-        "lightbox"
-      )
-      .addEventListener(
-        "click",
-        function(event) {
-
-          if (
-            event.target === this
-          ) {
-
-            this.classList.remove(
-              "show"
-            );
-
-          }
-
-        }
-      );
-
-
-    /* =========================
-       TOMBOL ESC
-       ========================= */
+    /*
+      Tombol ESC
+    */
 
     document.addEventListener(
       "keydown",
@@ -883,19 +850,18 @@
         if (
           event.key === "Escape"
         ) {
-
-          document
-            .getElementById(
-              "lightbox"
-            )
-            .classList.remove(
-              "show"
-            );
-
+          closeLightbox();
         }
 
       }
     );
+
+
+    /* =====================================================
+       JALANKAN
+    ===================================================== */
+
+    loadGallery();
 
   </script>
 
