@@ -1,117 +1,210 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontak | DENKESYAH MADIUN</title>
+
+  <title>Kontak | DENKESYAH 05.04.01 Madiun</title>
+
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.8fr 1.4fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .contact-info {
+      display: grid;
+      gap: 15px;
+    }
+
+    .contact-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.05);
+    }
+
+    .contact-card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      color: var(--g);
+    }
+
+    .contact-card p {
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    .map-box {
+      overflow: hidden;
+      min-height: 500px;
+      background: #eee;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    }
+
+    .map-box iframe {
+      display: block;
+      width: 100%;
+      height: 500px;
+      border: 0;
+    }
+
+    .map-button {
+      margin-top: 20px;
+    }
+
+    @media (max-width: 800px) {
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .map-box,
+      .map-box iframe {
+        min-height: 350px;
+        height: 350px;
+      }
+
+    }
+  </style>
+
 </head>
 
 <body>
 
   <!-- NAVBAR -->
-  <header class="nav">
+
+  <nav class="nav">
     <div class="navin wrap">
 
-      <a href="index.html" class="brand">
-        <img src="images/logo.png" alt="Logo DENKESYAH MADIUN" class="logo-img">
+```
+  <a href="index.html" class="brand">
 
-        <div>
-          <strong>DENKESYAH MADIUN</strong>
-          <small>Informasi Resmi</small>
-        </div>
-      </a>
+    <img
+      src="images/logo.png"
+      alt="Logo DENKESYAH MADIUN"
+      class="logo-img"
+    >
 
-      <nav class="links">
-        <a href="index.html">Beranda</a>
-        <a href="profil.html">Profil</a>
-        <a href="layanan.html">Layanan</a>
-        <a href="informasi.html">Informasi</a>
-        <a href="galeri.html">Galeri</a>
-        <a href="kontak.html" class="active">Kontak</a>
-      </nav>
-
+    <div>
+      <strong>DENKESYAH</strong>
+      <span>05.04.01 MADIUN</span>
     </div>
+
+  </a>
+
+
+  <div class="links">
+
+    <a href="index.html">Beranda</a>
+
+    <a href="profil.html">Profil</a>
+
+    <a href="layanan.html">Layanan</a>
+
+    <a href="informasi.html">Informasi</a>
+
+    <a href="galeri.html">Galeri</a>
+
+    <a href="kontak.html" class="active">Kontak</a>
+
+  </div>
+
+</div>
+```
+
+  </nav>
+
+  <!-- HEADER -->
+
+  <header class="pagehead">
+
+```
+<div class="wrap">
+
+  <div class="eyebrow">
+    HUBUNGI KAMI
+  </div>
+
+  <h1>
+    Kontak DENKESYAH 05.04.01 Madiun
+  </h1>
+
+  <p>
+    Informasi lokasi dan kontak resmi DENKESYAH 05.04.01 Madiun.
+  </p>
+
+</div>
+```
+
   </header>
 
-
-  <!-- HEADER HALAMAN -->
-  <section class="pagehead">
-    <div class="wrap">
-
-      <span class="eyebrow">HUBUNGI KAMI</span>
-
-      <h1>Kontak DENKESYAH MADIUN</h1>
-
-      <p>
-        Informasi alamat dan kanal komunikasi resmi
-        DENKESYAH MADIUN.
-      </p>
-
-    </div>
-  </section>
-
-
   <!-- KONTAK -->
-  <section>
-    <div class="wrap">
 
-      <div class="section-title">
+  <main>
 
-        <span class="eyebrow">INFORMASI KONTAK</span>
+```
+<section>
 
-        <h2>Hubungi DENKESYAH MADIUN</h2>
+  <div class="wrap">
 
-        <p class="lead">
-          Gunakan informasi berikut untuk mengetahui
-          lokasi dan kanal komunikasi yang tersedia.
-        </p>
+    <div class="contact-layout">
 
-      </div>
+      <!-- INFORMASI KONTAK -->
+      <div class="contact-info">
 
+        <div class="contact-card">
 
-      <div class="contactgrid">
+          <div class="eyebrow">
+            ALAMAT
+          </div>
 
-        <!-- ALAMAT -->
-        <div class="item">
-
-          <div class="icon">01</div>
-
-          <h3>Alamat</h3>
+          <h3>
+            Markas Denkesyah 05.04.01 Madiun
+          </h3>
 
           <p>
-            JL. Tanjung Manis No. 17,<br>
-            Manisrejo, Taman,<br>
-            Madiun
+            Jalan Tanjung Manis No. 17<br>
+            Manisrejo, Kecamatan Taman<br>
+            Kota Madiun, Jawa Timur
           </p>
 
         </div>
 
 
-        <!-- INSTAGRAM -->
-        <div class="item">
+        <div class="contact-card">
 
-          <div class="icon">02</div>
+          <div class="eyebrow">
+            INSTAGRAM
+          </div>
 
-          <h3>Instagram</h3>
+          <h3>
+            Instagram
+          </h3>
 
           <p>
             @denkesyahmadiun
           </p>
 
-          <p>
-            Kanal media sosial resmi.
-          </p>
-
         </div>
 
 
-        <!-- WHATSAPP -->
-        <div class="item">
+        <div class="contact-card">
 
-          <div class="icon">03</div>
+          <div class="eyebrow">
+            WHATSAPP
+          </div>
 
-          <h3>WhatsApp</h3>
+          <h3>
+            WhatsApp
+          </h3>
 
           <p>
             Belum tersedia
@@ -120,83 +213,106 @@
         </div>
 
 
-        <!-- EMAIL -->
-        <div class="item">
+        <div class="contact-card">
 
-          <div class="icon">04</div>
+          <div class="eyebrow">
+            EMAIL
+          </div>
 
-          <h3>Email</h3>
+          <h3>
+            Email
+          </h3>
 
           <p>
             Belum tersedia
+          </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+          <p>
+            Untuk informasi kontak terbaru, silakan gunakan
+            informasi resmi yang telah dipublikasikan oleh
+            DENKESYAH 05.04.01 Madiun.
           </p>
 
         </div>
 
       </div>
 
-    </div>
-  </section>
 
-
-  <!-- INFORMASI TAMBAHAN -->
-  <section class="cream">
-    <div class="wrap content">
-
+      <!-- GOOGLE MAPS -->
       <div>
 
-        <span class="eyebrow">INFORMASI RESMI</span>
+        <div class="map-box">
 
-        <h2>Kanal Komunikasi</h2>
+          <iframe
+            src="https://www.google.com/maps?q=-7.6379706,111.5454138&z=17&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Lokasi DENKESYAH 05.04.01 Madiun">
+          </iframe>
 
-        <p>
-          Informasi kontak pada halaman ini dapat diperbarui
-          apabila terdapat perubahan alamat, nomor telepon,
-          email, atau kanal komunikasi resmi lainnya.
-        </p>
+        </div>
 
-        <div class="note">
-          <strong>Catatan:</strong>
-          <br>
-          Pastikan informasi kontak yang dipublikasikan
-          merupakan informasi resmi dan telah diperbarui.
+
+        <div class="map-button">
+
+          <a
+            href="https://maps.app.goo.gl/mCeW3DazaUuxFgF18"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn gold"
+          >
+            📍 Buka Lokasi di Google Maps
+          </a>
+
         </div>
 
       </div>
 
     </div>
-  </section>
 
+  </div>
+
+</section>
+```
+
+  </main>
 
   <!-- FOOTER -->
+
   <footer>
-    <div class="foot wrap">
 
-      <div>
-        <strong>DENKESYAH MADIUN</strong>
+```
+<div class="foot wrap">
 
-        <p>
-          Informasi dan layanan resmi
-          DENKESYAH MADIUN.
-        </p>
-      </div>
+  <div>
 
+    <strong>
+      DENKESYAH 05.04.01 MADIUN
+    </strong>
 
-      <div>
-        <strong>Kontak</strong>
+    <p>
+      Detasemen Kesehatan Wilayah 05.04.01 Madiun
+    </p>
 
-        <p>
-          JL. Tanjung Manis No. 17,
-          Manisrejo, Taman, Madiun
-        </p>
+  </div>
 
-        <p>
-          Instagram: @denkesyahmadiun
-        </p>
+  <div>
 
-      </div>
+    <p>
+      © 2026 DENKESYAH 05.04.01 Madiun
+    </p>
 
-    </div>
+  </div>
+
+</div>
+```
+
   </footer>
 
 </body>
