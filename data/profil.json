@@ -9,17 +9,61 @@
 
 "judul_sejarah": "Sejarah dan Perkembangan",
 
-"isi_sejarah": "<h3>Masa Awal Perjuangan Kemerdekaan</h3><p>Sejarah pelayanan kesehatan militer di wilayah Madiun tidak terlepas dari perjalanan perjuangan mempertahankan kemerdekaan Indonesia. Pada masa 1945–1949, seiring terbentuknya Badan Keamanan Rakyat (BKR) dan kemudian Tentara Keamanan Rakyat (TKR), kebutuhan terhadap dukungan kesehatan bagi para pejuang dan prajurit semakin berkembang.</p><p>Pada masa tersebut, unsur kesehatan militer turut mengambil peran penting dalam memberikan pertolongan dan perawatan kepada para korban pertempuran di wilayah Madiun dan sekitarnya.</p><h3>Perkembangan Detasemen Kesehatan</h3><p>Seiring dengan perkembangan organisasi TNI Angkatan Darat, penyelenggaraan dukungan dan pelayanan kesehatan militer di wilayah Madiun terus mengalami perkembangan dan penataan organisasi.</p><p>Dalam perkembangannya, Detasemen Kesehatan menjadi salah satu unsur pelaksana kesehatan yang memiliki peran dalam menyelenggarakan dukungan kesehatan bagi satuan-satuan TNI AD serta pelayanan kesehatan bagi prajurit dan keluarganya di wilayah tanggung jawabnya.</p><h3>Pembentukan Denkesyah</h3><p>Sejalan dengan perkembangan organisasi dan penataan unsur kesehatan TNI Angkatan Darat, terbentuklah Denkesyah 05.04.01 Madiun yang berkedudukan di Kota Madiun.</p><p>Denkesyah 05.04.01 Madiun menjadi salah satu unsur penting dalam penyelenggaraan dukungan kesehatan bagi satuan-satuan TNI AD di wilayah Korem 081/Dhirotsaha Jaya, termasuk dalam mengoordinasikan dan mendukung pelaksanaan pelayanan kesehatan melalui satuan dan fasilitas kesehatan di wilayah kerjanya.</p>",
+"sejarah": [
+{
+"judul": "Masa Awal Perjuangan Kemerdekaan",
+"isi": "Sejarah pelayanan kesehatan militer di wilayah Madiun tidak terlepas dari perjalanan perjuangan mempertahankan kemerdekaan Indonesia. Pada masa 1945–1949, seiring terbentuknya Badan Keamanan Rakyat (BKR) dan kemudian Tentara Keamanan Rakyat (TKR), kebutuhan terhadap dukungan kesehatan bagi para pejuang dan prajurit semakin berkembang.\n\nPada masa tersebut, unsur kesehatan militer turut mengambil peran penting dalam memberikan pertolongan dan perawatan kepada para korban pertempuran di wilayah Madiun dan sekitarnya."
+},
+{
+"judul": "Perkembangan Detasemen Kesehatan",
+"isi": "Seiring dengan perkembangan organisasi TNI Angkatan Darat, penyelenggaraan dukungan dan pelayanan kesehatan militer di wilayah Madiun terus mengalami perkembangan dan penataan organisasi.\n\nDalam perkembangannya, Detasemen Kesehatan menjadi salah satu unsur pelaksana kesehatan yang memiliki peran dalam menyelenggarakan dukungan kesehatan bagi satuan-satuan TNI AD serta pelayanan kesehatan bagi prajurit dan keluarganya di wilayah tanggung jawabnya."
+},
+{
+"judul": "Pembentukan Denkesyah",
+"isi": "Sejalan dengan perkembangan organisasi dan penataan unsur kesehatan TNI Angkatan Darat, terbentuklah Denkesyah 05.04.01 Madiun yang berkedudukan di Kota Madiun.\n\nDenkesyah 05.04.01 Madiun menjadi salah satu unsur penting dalam penyelenggaraan dukungan kesehatan bagi satuan-satuan TNI AD di wilayah Korem 081/Dhirotsaha Jaya, termasuk dalam mengoordinasikan dan mendukung pelaksanaan pelayanan kesehatan melalui satuan dan fasilitas kesehatan di wilayah kerjanya."
+}
+],
 
-"judul_visi": "Satuan dan Fasilitas Kesehatan di Bawah Naungan",
+"judul_fasilitas": "Satuan dan Fasilitas Kesehatan di Bawah Naungan",
 
-"isi_visi": "<p>Dalam melaksanakan tugas dan tanggung jawabnya, Denkesyah 05.04.01 Madiun menaungi dan mengoordinasikan beberapa satuan serta fasilitas kesehatan, yaitu:</p><ol><li>Poliklinik Denkesyah Madiun</li><li>Poliklinik Kesehatan Blitar</li><li>Poliklinik Kesehatan Tulungagung</li><li>Poliklinik Kesehatan Trenggalek</li><li>Poliklinik Kesehatan Ponorogo</li><li>Poliklinik Kesehatan Pacitan</li><li>Poliklinik Kesehatan Ngawi</li><li>Poliklinik Kesehatan Magetan</li><li>Poliklinik Kesehatan Nganjuk</li></ol><p>Keberadaan satuan dan fasilitas kesehatan tersebut merupakan bagian penting dalam mendukung pelaksanaan tugas Denkesyah 05.04.01 Madiun, khususnya dalam penyelenggaraan dukungan dan pelayanan kesehatan bagi personel TNI Angkatan Darat beserta keluarganya.</p>",
+"deskripsi_fasilitas": "Dalam melaksanakan tugas dan tanggung jawabnya, Denkesyah 05.04.01 Madiun menaungi dan mengoordinasikan beberapa satuan serta fasilitas kesehatan, yaitu:",
+
+"fasilitas": [
+"Poliklinik Denkesyah Madiun",
+"Poliklinik Kesehatan Blitar",
+"Poliklinik Kesehatan Tulungagung",
+"Poliklinik Kesehatan Trenggalek",
+"Poliklinik Kesehatan Ponorogo",
+"Poliklinik Kesehatan Pacitan",
+"Poliklinik Kesehatan Ngawi",
+"Poliklinik Kesehatan Magetan",
+"Poliklinik Kesehatan Nganjuk"
+],
+
+"penutup_fasilitas": "Keberadaan satuan dan fasilitas kesehatan tersebut merupakan bagian penting dalam mendukung pelaksanaan tugas Denkesyah 05.04.01 Madiun, khususnya dalam penyelenggaraan dukungan dan pelayanan kesehatan bagi personel TNI Angkatan Darat beserta keluarganya.",
 
 "judul_tugas": "Tugas dan Peran",
 
-"isi_tugas": "<p>Dalam melaksanakan tugasnya, Denkesyah 05.04.01 Madiun menyelenggarakan berbagai kegiatan di bidang kesehatan, antara lain:</p><ul><li><strong>Dukungan kesehatan</strong> bagi satuan dan personel TNI AD.</li><li><strong>Pelayanan kesehatan preventif</strong> melalui upaya pencegahan dan pemeliharaan kesehatan.</li><li><strong>Pelayanan kesehatan kuratif</strong> melalui pemeriksaan, pengobatan, dan perawatan.</li><li><strong>Pelayanan rehabilitatif</strong> untuk mendukung pemulihan kondisi kesehatan personel.</li><li><strong>Pembinaan kesehatan</strong> guna menjaga dan meningkatkan kesiapan kesehatan prajurit serta keluarganya.</li><li><strong>Kegiatan bakti sosial dan pelayanan kesehatan masyarakat</strong> sebagai bentuk kontribusi TNI AD dalam membantu masyarakat.</li></ul>",
+"deskripsi_tugas": "Dalam melaksanakan tugasnya, Denkesyah 05.04.01 Madiun menyelenggarakan berbagai kegiatan di bidang kesehatan, antara lain:",
 
-"judul_struktur": "Lokasi",
+"tugas": [
+"Dukungan kesehatan bagi satuan dan personel TNI AD.",
+"Pelayanan kesehatan preventif melalui upaya pencegahan dan pemeliharaan kesehatan.",
+"Pelayanan kesehatan kuratif melalui pemeriksaan, pengobatan, dan perawatan.",
+"Pelayanan rehabilitatif untuk mendukung pemulihan kondisi kesehatan personel.",
+"Pembinaan kesehatan guna menjaga dan meningkatkan kesiapan kesehatan prajurit serta keluarganya.",
+"Kegiatan bakti sosial dan pelayanan kesehatan masyarakat sebagai bentuk kontribusi TNI AD dalam membantu masyarakat."
+],
 
-"isi_struktur": "<h3>Markas Denkesyah 05.04.01 Madiun</h3><p><strong>Jalan Tanjung Manis No. 17</strong><br>Manisrejo, Kecamatan Taman<br>Kota Madiun, Jawa Timur</p><p>Dengan semangat <strong>pengabdian, profesionalisme, dan kepedulian</strong>, Denkesyah 05.04.01 Madiun terus berkomitmen memberikan dukungan kesehatan yang optimal bagi prajurit TNI AD dan keluarganya serta berkontribusi dalam pelayanan kesehatan bagi masyarakat.</p>"
+"judul_lokasi": "Lokasi",
+
+"nama_markas": "Markas Denkesyah 05.04.01 Madiun",
+
+"alamat": [
+"Jalan Tanjung Manis No. 17",
+"Manisrejo, Kecamatan Taman",
+"Kota Madiun, Jawa Timur"
+],
+
+"penutup": "Dengan semangat pengabdian, profesionalisme, dan kepedulian, Denkesyah 05.04.01 Madiun terus berkomitmen memberikan dukungan kesehatan yang optimal bagi prajurit TNI AD dan keluarganya serta berkontribusi dalam pelayanan kesehatan bagi masyarakat."
 }
