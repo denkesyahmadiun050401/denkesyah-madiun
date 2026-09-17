@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Galeri | DENKESYAH MADIUN</title>
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
   <!-- NAVBAR -->
-  <header class="nav">
+  <nav class="nav">
     <div class="navin wrap">
 
       <a href="index.html" class="brand">
@@ -18,132 +20,45 @@
 
         <div>
           <strong>DENKESYAH MADIUN</strong>
-          <small>Informasi Resmi</small>
+          <small>Detasemen Kesehatan Wilayah</small>
         </div>
       </a>
 
-      <nav class="links">
+      <div class="links">
         <a href="index.html">Beranda</a>
         <a href="profil.html">Profil</a>
         <a href="layanan.html">Layanan</a>
         <a href="informasi.html">Informasi</a>
         <a href="galeri.html" class="active">Galeri</a>
         <a href="kontak.html">Kontak</a>
-      </nav>
+      </div>
 
     </div>
-  </header>
+  </nav>
 
 
-  <!-- HEADER HALAMAN -->
-  <section class="pagehead">
+  <!-- HEADER -->
+  <header class="pagehead">
     <div class="wrap">
 
       <span class="eyebrow">DOKUMENTASI</span>
 
-      <h1>Galeri Kegiatan</h1>
+      <h1 id="judul-galeri">Galeri Kegiatan</h1>
 
-      <p>
-        Kumpulan dokumentasi foto kegiatan resmi
-        DENKESYAH MADIUN.
+      <p id="deskripsi-galeri">
+        Memuat informasi...
       </p>
 
     </div>
-  </section>
+  </header>
 
 
   <!-- GALERI -->
   <section>
     <div class="wrap">
 
-      <div class="section-title">
-
-        <span class="eyebrow">FOTO KEGIATAN</span>
-
-        <h2>Dokumentasi DENKESYAH MADIUN</h2>
-
-        <p class="lead">
-          Dokumentasi kegiatan dapat ditambahkan secara
-          bertahap pada halaman galeri ini.
-        </p>
-
-      </div>
-
-
-      <div class="gallery">
-
-        <!-- FOTO 1 -->
-        <div class="photo big">
-          <div>
-            <strong>Dokumentasi Utama</strong>
-            <span>Foto kegiatan</span>
-          </div>
-        </div>
-
-
-        <!-- FOTO 2 -->
-        <div class="photo">
-          <div>
-            <strong>Kegiatan</strong>
-            <span>Foto kegiatan satuan</span>
-          </div>
-        </div>
-
-
-        <!-- FOTO 3 -->
-        <div class="photo">
-          <div>
-            <strong>Pelayanan</strong>
-            <span>Dokumentasi pelayanan</span>
-          </div>
-        </div>
-
-
-        <!-- FOTO 4 -->
-        <div class="photo">
-          <div>
-            <strong>Pembinaan</strong>
-            <span>Dokumentasi pembinaan</span>
-          </div>
-        </div>
-
-
-        <!-- FOTO 5 -->
-        <div class="photo">
-          <div>
-            <strong>Aktivitas</strong>
-            <span>Aktivitas satuan</span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- INFORMASI GALERI -->
-  <section class="cream">
-    <div class="wrap content">
-
-      <div>
-
-        <span class="eyebrow">DOKUMENTASI RESMI</span>
-
-        <h2>Arsip Foto Kegiatan</h2>
-
-        <p>
-          Galeri ini dapat digunakan untuk menampilkan
-          dokumentasi kegiatan, pelayanan kesehatan,
-          pembinaan, serta aktivitas resmi DENKESYAH MADIUN.
-        </p>
-
-        <p>
-          Pada tahap berikutnya, foto akan dibuat lebih mudah
-          untuk ditambahkan melalui folder khusus sehingga
-          pengguna tidak perlu mengubah struktur halaman utama.
-        </p>
-
+      <div id="daftar-galeri" class="gallery">
+        <p>Memuat galeri...</p>
       </div>
 
     </div>
@@ -156,29 +71,122 @@
 
       <div>
         <strong>DENKESYAH MADIUN</strong>
-
-        <p>
-          Informasi dan layanan resmi
-          DENKESYAH MADIUN.
-        </p>
+        <p>Informasi resmi dan dokumentasi kegiatan.</p>
       </div>
 
-
       <div>
-        <strong>Kontak</strong>
-
         <p>
           JL. Tanjung Manis No. 17,
           Manisrejo, Taman, Madiun
-        </p>
-
-        <p>
-          Instagram: @denkesyahmadiun
         </p>
       </div>
 
     </div>
   </footer>
+
+
+  <script>
+
+    fetch("data/galeri.json")
+      .then(function(response) {
+
+        if (!response.ok) {
+          throw new Error("galeri.json tidak ditemukan");
+        }
+
+        return response.json();
+
+      })
+
+      .then(function(data) {
+
+        document.getElementById("judul-galeri").textContent =
+          data.judul || "Galeri Kegiatan";
+
+        document.getElementById("deskripsi-galeri").textContent =
+          data.deskripsi || "";
+
+        const daftar = document.getElementById("daftar-galeri");
+
+        daftar.innerHTML = "";
+
+        if (!data.galeri || data.galeri.length === 0) {
+
+          daftar.innerHTML = `
+            <div class="note">
+              <strong>Belum Ada Dokumentasi</strong>
+              <p>
+                Dokumentasi foto kegiatan akan ditampilkan
+                setelah data tersedia.
+              </p>
+            </div>
+          `;
+
+          return;
+        }
+
+        data.galeri.forEach(function(item) {
+
+          const div = document.createElement("div");
+
+          div.className = "photo";
+
+          div.innerHTML = `
+            
+            <img
+              src="${item.gambar}"
+              alt="${item.judul || 'Dokumentasi DENKESYAH MADIUN'}"
+              style="width:100%; height:240px; object-fit:cover; display:block;"
+            >
+
+            <div style="padding:16px;">
+
+              <span class="date">
+                DOKUMENTASI
+              </span>
+
+              <h3>
+                ${item.judul || ""}
+              </h3>
+
+              <p>
+                ${item.deskripsi || ""}
+              </p>
+
+            </div>
+
+          `;
+
+          daftar.appendChild(div);
+
+        });
+
+      })
+
+      .catch(function(error) {
+
+        console.error(error);
+
+        document.getElementById("daftar-galeri").innerHTML = `
+          
+          <div class="note">
+
+            <strong>
+              Data galeri belum dapat dimuat.
+            </strong>
+
+            <p>
+              Periksa kembali file galeri.json
+              dan lokasi foto.
+            </p>
+
+          </div>
+
+        `;
+
+      });
+
+  </script>
 
 </body>
 </html>
