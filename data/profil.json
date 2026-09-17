@@ -1,0 +1,20 @@
+{
+  "judul": "Tentang DENKESYAH MADIUN",
+  "deskripsi": "Informasi mengenai profil, sejarah, visi dan misi, serta tugas dan fungsi DENKESYAH MADIUN.",
+  "sejarah": {
+    "judul": "Sejarah",
+    "isi": "Informasi sejarah DENKESYAH MADIUN akan ditambahkan setelah data resmi tersedia."
+  },
+  "visi_misi": {
+    "judul": "Visi & Misi",
+    "isi": "Informasi visi dan misi DENKESYAH MADIUN akan ditambahkan setelah data resmi tersedia."
+  },
+  "tugas_fungsi": {
+    "judul": "Tugas & Fungsi",
+    "isi": "Informasi tugas dan fungsi DENKESYAH MADIUN akan ditambahkan berdasarkan data resmi."
+  },
+  "struktur": {
+    "judul": "Struktur Organisasi",
+    "isi": "Struktur organisasi akan ditampilkan setelah data resmi tersedia."
+  }
+}
