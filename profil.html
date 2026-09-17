@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil | DENKESYAH MADIUN</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="navin wrap">
+
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="Logo DENKESYAH MADIUN" class="logo-img">
+
+        <div>
+          <strong>DENKESYAH MADIUN</strong>
+          <small>Informasi Resmi</small>
+        </div>
+      </a>
+
+      <nav class="links">
+        <a href="index.html">Beranda</a>
+        <a href="profil.html" class="active">Profil</a>
+        <a href="layanan.html">Layanan</a>
+        <a href="informasi.html">Informasi</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HEADER HALAMAN -->
+  <section class="pagehead">
+    <div class="wrap">
+
+      <span class="eyebrow">PROFIL SATUAN</span>
+
+      <h1 id="judul-profil">Profil DENKESYAH MADIUN</h1>
+
+      <p id="deskripsi-profil">
+        Memuat informasi profil...
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- TENTANG SATUAN -->
+  <section>
+    <div class="wrap">
+
+      <div class="section-title">
+
+        <span class="eyebrow">TENTANG SATUAN</span>
+
+        <h2>DENKESYAH MADIUN</h2>
+
+        <p class="lead">
+          Informasi profil satuan ditampilkan berdasarkan
+          data yang tersimpan pada sistem website.
+        </p>
+
+      </div>
+
+
+      <div class="profile">
+
+        <div class="profile-logo">
+          <img src="images/logo.png" alt="Logo DENKESYAH MADIUN">
+        </div>
+
+        <div>
+
+          <span class="tag">PROFIL</span>
+
+          <h2 id="judul-profil-konten">
+            Tentang DENKESYAH MADIUN
+          </h2>
+
+          <p id="deskripsi-profil-konten">
+            Memuat informasi...
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- INFORMASI PROFIL -->
+  <section class="cream">
+    <div class="wrap">
+
+      <div class="section-title">
+
+        <span class="eyebrow">INFORMASI PROFIL</span>
+
+        <h2>Profil Satuan</h2>
+
+      </div>
+
+
+      <div class="cards">
+
+        <!-- SEJARAH -->
+        <article class="card">
+
+          <div class="icon">01</div>
+
+          <span class="tag">SEJARAH</span>
+
+          <h3 id="judul-sejarah">
+            Sejarah
+          </h3>
+
+          <p id="isi-sejarah">
+            Memuat informasi...
+          </p>
+
+        </article>
+
+
+        <!-- VISI MISI -->
+        <article class="card">
+
+          <div class="icon">02</div>
+
+          <span class="tag">VISI & MISI</span>
+
+          <h3 id="judul-visi">
+            Visi & Misi
+          </h3>
+
+          <p id="isi-visi">
+            Memuat informasi...
+          </p>
+
+        </article>
+
+
+        <!-- TUGAS FUNGSI -->
+        <article class="card">
+
+          <div class="icon">03</div>
+
+          <span class="tag">TUGAS & FUNGSI</span>
+
+          <h3 id="judul-tugas">
+            Tugas & Fungsi
+          </h3>
+
+          <p id="isi-tugas">
+            Memuat informasi...
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- STRUKTUR ORGANISASI -->
+  <section>
+    <div class="wrap content">
+
+      <div>
+
+        <span class="eyebrow">ORGANISASI</span>
+
+        <h2 id="judul-struktur">
+          Struktur Organisasi
+        </h2>
+
+        <p id="isi-struktur">
+          Memuat informasi...
+        </p>
+
+        <div class="note">
+          Informasi struktur organisasi akan diperbarui
+          berdasarkan data resmi yang tersedia.
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot wrap">
+
+      <div>
+        <strong>DENKESYAH MADIUN</strong>
+
+        <p>
+          Informasi dan layanan resmi
+          DENKESYAH MADIUN.
+        </p>
+      </div>
+
+      <div>
+        <strong>Kontak</strong>
+
+        <p>
+          JL. Tanjung Manis No. 17,
+          Manisrejo, Taman, Madiun
+        </p>
+
+        <p>
+          Instagram: @denkesyahmadiun
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- MEMUAT DATA JSON -->
+  <script>
+    fetch("data/profil.json")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("File profil.json tidak ditemukan.");
+        }
+
+        return response.json();
+      })
+
+      .then(data => {
+
+        // Header
+        document.getElementById("judul-profil").textContent =
+          data.judul;
+
+        document.getElementById("deskripsi-profil").textContent =
+          data.deskripsi;
+
+
+        // Profil utama
+        document.getElementById("judul-profil-konten").textContent =
+          data.judul;
+
+        document.getElementById("deskripsi-profil-konten").textContent =
+          data.deskripsi;
+
+
+        // Sejarah
+        document.getElementById("judul-sejarah").textContent =
+          data.sejarah.judul;
+
+        document.getElementById("isi-sejarah").textContent =
+          data.sejarah.isi;
+
+
+        // Visi & Misi
+        document.getElementById("judul-visi").textContent =
+          data.visi_misi.judul;
+
+        document.getElementById("isi-visi").textContent =
+          data.visi_misi.isi;
+
+
+        // Tugas & Fungsi
+        document.getElementById("judul-tugas").textContent =
+          data.tugas_fungsi.judul;
+
+        document.getElementById("isi-tugas").textContent =
+          data.tugas_fungsi.isi;
+
+
+        // Struktur Organisasi
+        document.getElementById("judul-struktur").textContent =
+          data.struktur.judul;
+
+        document.getElementById("isi-struktur").textContent =
+          data.struktur.isi;
+
+      })
+
+      .catch(error => {
+
+        console.error(error);
+
+        document.getElementById("deskripsi-profil").textContent =
+          "Data profil belum dapat dimuat.";
+
+      });
+  </script>
+
+</body>
+</html>
