@@ -1,527 +1,271 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Layanan | DENKESYAH MADIUN</title>
+  <title>PPID | DENKESYAH 05.04.01 Madiun</title>
 
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .ppid-intro {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+
+    .ppid-intro p {
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .ppid-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .ppid-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.05);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .ppid-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,.09);
+    }
+
+    .ppid-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--g);
+      color: var(--gold);
+      border-radius: 10px;
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+
+    .ppid-card h3 {
+      color: var(--g);
+      margin: 0 0 10px;
+    }
+
+    .ppid-card p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .ppid-section {
+      margin-top: 35px;
+    }
+
+    .ppid-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .ppid-list-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .ppid-number {
+      min-width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--g);
+      color: var(--white);
+      border-radius: 50%;
+      font-weight: bold;
+    }
+
+    .ppid-list-item h3 {
+      margin: 0 0 6px;
+      color: var(--g);
+    }
+
+    .ppid-list-item p {
+      margin: 0;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .ppid-note {
+      margin-top: 35px;
+      padding: 25px;
+      background: #fff;
+      border-left: 5px solid var(--gold);
+      border-radius: 10px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.05);
+    }
+
+    .ppid-note strong {
+      color: var(--g);
+    }
+
+    @media (max-width: 900px) {
+      .ppid-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .ppid-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
 
-  <!-- =========================
-       NAVBAR
-  ========================== -->
-  <header class="nav">
+  <!-- NAVBAR -->
 
+  <nav class="nav">
     <div class="navin wrap">
 
-      <a href="index.html" class="brand">
+```
+  <a href="index.html" class="brand">
 
-        <img
-          src="images/logo.png"
-          alt="Logo DENKESYAH MADIUN"
-          class="logo-img"
-        >
+    <img
+      src="images/logo.png"
+      alt="Logo DENKESYAH MADIUN"
+      class="logo-img"
+    >
 
-        <div>
-          <strong>DENKESYAH MADIUN</strong>
-          <small>Informasi Resmi</small>
-        </div>
-
-      </a>
-
-
-      <nav class="links">
-
-        <a href="index.html">
-          Beranda
-        </a>
-
-        <a href="profil.html">
-          Profil
-        </a>
-
-        <a href="layanan.html" class="active">
-          Layanan
-        </a>
-
-        <a href="informasi.html">
-          Informasi
-        </a>
-
-        <a href="galeri.html">
-          Galeri
-        </a>
-
-        <a href="kontak.html">
-          Kontak
-        </a>
-
-      </nav>
-
+    <div>
+      <strong>DENKESYAH</strong>
+      <span>05.04.01 MADIUN</span>
     </div>
+
+  </a>
+
+
+  <div class="links">
+
+    <a href="index.html">Beranda</a>
+
+    <a href="profil.html">Profil</a>
+
+    <a href="layanan.html" class="active">PPID</a>
+
+    <a href="informasi.html">Informasi</a>
+
+    <a href="galeri.html">Galeri</a>
+
+    <a href="kontak.html">Kontak</a>
+
+  </div>
+
+</div>
+```
+
+  </nav>
+
+  <!-- HEADER -->
+
+  <header class="pagehead">
+
+```
+<div class="wrap">
+
+  <div class="eyebrow">
+    INFORMASI PUBLIK
+  </div>
+
+  <h1>
+    PPID DENKESYAH 05.04.01 Madiun
+  </h1>
+
+  <p>
+    Pejabat Pengelola Informasi dan Dokumentasi
+    DENKESYAH 05.04.01 Madiun.
+  </p>
+
+</div>
+```
 
   </header>
 
+  <main>
 
-  <!-- =========================
-       HEADER HALAMAN
-  ========================== -->
-  <section class="pagehead">
+```
+<!-- PENGENALAN PPID -->
+<section>
 
-    <div class="wrap">
+  <div class="wrap">
 
-      <span class="eyebrow">
-        LAYANAN
-      </span>
+    <div class="ppid-intro">
 
-      <h1 id="judul-layanan">
-        Layanan DENKESYAH MADIUN
-      </h1>
+      <div class="eyebrow">
+        TENTANG PPID
+      </div>
 
-      <p id="deskripsi-layanan">
-        Memuat informasi layanan...
+      <h2>
+        Pejabat Pengelola Informasi dan Dokumentasi
+      </h2>
+
+      <p>
+        Halaman PPID DENKESYAH 05.04.01 Madiun
+        menyediakan informasi mengenai pengelolaan,
+        dokumentasi, dan pelayanan informasi publik
+        sesuai dengan ketentuan yang berlaku.
       </p>
 
     </div>
 
-  </section>
 
+    <!-- KATEGORI INFORMASI -->
+    <div class="ppid-grid">
 
-  <!-- =========================
-       DAFTAR LAYANAN
-  ========================== -->
-  <section>
+      <div class="ppid-card">
 
-    <div class="wrap">
-
-      <div class="section-title">
-
-        <span class="eyebrow">
-          PELAYANAN
-        </span>
-
-        <h2>
-          Layanan Kesehatan
-        </h2>
-
-        <p class="lead">
-          Informasi layanan ditampilkan berdasarkan
-          data resmi yang tersedia.
-        </p>
-
-      </div>
-
-
-      <!--
-        Kartu layanan akan dibuat
-        otomatis dari layanan.json
-      -->
-
-      <div
-        class="cards"
-        id="daftar-layanan"
-      >
-
-        <div class="note">
-          Memuat data layanan...
+        <div class="ppid-icon">
+          ℹ
         </div>
 
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       INFORMASI LAYANAN
-  ========================== -->
-  <section class="cream">
-
-    <div class="wrap">
-
-      <div class="section-title">
-
-        <span class="eyebrow">
-          INFORMASI
-        </span>
-
-        <h2>
-          Informasi Layanan
-        </h2>
-
-      </div>
-
-
-      <div class="cards">
-
-
-        <!-- JENIS PELAYANAN -->
-
-        <article class="card">
-
-          <div class="icon">
-            01
-          </div>
-
-          <span class="tag">
-            INFORMASI
-          </span>
-
-          <h3>
-            Jenis Pelayanan
-          </h3>
-
-          <p id="jenis-pelayanan">
-            Memuat informasi...
-          </p>
-
-        </article>
-
-
-        <!-- PERSYARATAN -->
-
-        <article class="card">
-
-          <div class="icon">
-            02
-          </div>
-
-          <span class="tag">
-            INFORMASI
-          </span>
-
-          <h3>
-            Persyaratan
-          </h3>
-
-          <p id="persyaratan">
-            Memuat informasi...
-          </p>
-
-        </article>
-
-
-        <!-- INFORMASI TAMBAHAN -->
-
-        <article class="card">
-
-          <div class="icon">
-            03
-          </div>
-
-          <span class="tag">
-            INFORMASI
-          </span>
-
-          <h3>
-            Informasi Tambahan
-          </h3>
-
-          <p id="informasi-tambahan">
-            Memuat informasi...
-          </p>
-
-        </article>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       DUKUNGAN KESEHATAN
-  ========================== -->
-  <section>
-
-    <div class="wrap content">
-
-      <div>
-
-        <span class="eyebrow">
-          DUKUNGAN KESEHATAN
-        </span>
-
-        <h2>
-          Dukungan Kesehatan
-        </h2>
+        <h3>
+          Informasi Berkala
+        </h3>
 
         <p>
-          Informasi mengenai dukungan kesehatan
-          DENKESYAH MADIUN akan disajikan berdasarkan
-          data dan informasi resmi.
+          Informasi publik yang disampaikan secara
+          berkala sesuai dengan ketentuan dan
+          klasifikasi informasi yang berlaku.
         </p>
 
-        <div class="note">
+      </div>
 
-          Informasi pada halaman ini dapat diperbarui
-          melalui file data layanan.
 
+      <div class="ppid-card">
+
+        <div class="ppid-icon">
+          📄
         </div>
 
-      </div>
-
-
-      <div class="profile-logo">
-
-        <img
-          src="images/logo.png"
-          alt="Logo DENKESYAH MADIUN"
-        >
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       INFORMASI RESMI
-  ========================== -->
-  <section class="cream">
-
-    <div class="wrap content">
-
-      <div>
-
-        <span class="eyebrow">
-          INFORMASI RESMI
-        </span>
-
-        <h2>
-          Informasi Layanan
-        </h2>
+        <h3>
+          Informasi Setiap Saat
+        </h3>
 
         <p>
-          Informasi pelayanan dapat diperbarui
-          sesuai dengan ketentuan dan informasi resmi
-          yang berlaku.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
-  <footer>
-
-    <div class="foot wrap">
-
-
-      <div>
-
-        <strong>
-          DENKESYAH MADIUN
-        </strong>
-
-        <p>
-          Informasi dan layanan resmi
-          DENKESYAH MADIUN.
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <strong>
-          Kontak
-        </strong>
-
-        <p>
-          JL. Tanjung Manis No. 17,
-          Manisrejo, Taman, Madiun
-        </p>
-
-        <p>
-          Instagram: @denkesyahmadiun
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </footer>
-
-
-  <!-- =========================
-       JAVASCRIPT
-       MEMUAT DATA JSON
-  ========================== -->
-
-  <script>
-
-    fetch("data/layanan.json")
-
-      .then(function(response) {
-
-        if (!response.ok) {
-
-          throw new Error(
-            "File layanan.json tidak ditemukan."
-          );
-
-        }
-
-        return response.json();
-
-      })
-
-
-      .then(function(data) {
-
-
-        /*
-          =========================
-          HEADER
-        =========================
-        */
-
-        document.getElementById(
-          "judul-layanan"
-        ).textContent = data.judul;
-
-
-        document.getElementById(
-          "deskripsi-layanan"
-        ).textContent = data.deskripsi;
-
-
-
-        /*
-          =========================
-          DAFTAR LAYANAN
-        =========================
-        */
-
-        const daftarLayanan =
-          document.getElementById(
-            "daftar-layanan"
-          );
-
-
-        daftarLayanan.innerHTML = "";
-
-
-        data.layanan.forEach(
-          function(item, index) {
-
-
-            const nomor =
-              String(index + 1).padStart(
-                2,
-                "0"
-              );
-
-
-            const kartu =
-              document.createElement(
-                "article"
-              );
-
-
-            kartu.className = "card";
-
-
-            kartu.innerHTML = `
-
-              <div class="icon">
-                ${nomor}
-              </div>
-
-              <span class="tag">
-                LAYANAN
-              </span>
-
-              <h3>
-                ${item.judul}
-              </h3>
-
-              <p>
-                ${item.deskripsi}
-              </p>
-
-            `;
-
-
-            daftarLayanan.appendChild(
-              kartu
-            );
-
-
-          }
-        );
-
-
-
-        /*
-          =========================
-          INFORMASI LAYANAN
-        =========================
-        */
-
-        document.getElementById(
-          "jenis-pelayanan"
-        ).textContent =
-          data.informasi_layanan.jenis_pelayanan;
-
-
-        document.getElementById(
-          "persyaratan"
-        ).textContent =
-          data.informasi_layanan.persyaratan;
-
-
-        document.getElementById(
-          "informasi-tambahan"
-        ).textContent =
-          data.informasi_layanan.informasi_tambahan;
-
-
-      })
-
-
-      /*
-        =========================
-        JIKA TERJADI ERROR
-      =========================
-      */
-
-      .catch(function(error) {
-
-        console.error(error);
-
-
-        document.getElementById(
-          "daftar-layanan"
-        ).innerHTML = `
-
-          <div class="note">
-
-            Data layanan belum dapat dimuat.
-
-          </div>
-
-        `;
-
-      });
-
-  </script>
-
-
-</body>
-</html>
+```
